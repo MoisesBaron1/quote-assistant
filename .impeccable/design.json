@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T17:53:57.796545+00:00",
+  "title": "Design System: Epica",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Operational Cobalt"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Daylight Paper"
+      },
+      "navigation": {
+        "role": "neutral",
+        "displayName": "Charcoal Navigation"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Legible Supporting Ink"
+      },
+      "avatar-ink": {
+        "role": "neutral",
+        "displayName": "Fixed Avatar Initials"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Page Headline",
+        "purpose": "Operational page title."
+      },
+      "metric": {
+        "displayName": "Indicator Value",
+        "purpose": "Tabular dashboard indicators."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog",
+        "value": "0 12px 60px #151b3a33",
+        "purpose": "Temporary dialogs only."
+      },
+      {
+        "name": "toast",
+        "value": "0 6px 25px #141e3a24",
+        "purpose": "Temporary status notification."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "160ms",
+        "purpose": "Background, border and text states; removed for reduced motion."
+      },
+      {
+        "name": "navigation",
+        "value": "180ms",
+        "purpose": "Off-canvas transform; removed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1800px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1250px"
+      },
+      {
+        "name": "stacked-heading",
+        "value": "1050px"
+      },
+      {
+        "name": "off-canvas-navigation",
+        "value": "900px"
+      },
+      {
+        "name": "stacked-mobile",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "description": "Nueva cotización",
+      "html": "<button class=\"ds-primary\">Nueva cotización</button>",
+      "css": ".ds-primary{background:var(--accent,#3044d7);color:#fff;padding:10px 13px;border:0;border-radius:7px;min-height:39px;font:600 12px \"DM Sans\",sans-serif;}.ds-primary:focus-visible{outline:3px solid #8998f5;outline-offset:3px}.ds-primary:hover{filter:brightness(.96)}.ds-primary:disabled{opacity:.55;cursor:default}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "Exportar CSV",
+      "html": "<button class=\"ds-secondary\">Exportar CSV</button>",
+      "css": ".ds-secondary{background:#fff;color:#525b6e;border:1px solid #dce0e9;border-radius:7px;padding:10px 13px;min-height:39px;font:600 12px \"DM Sans\",sans-serif;}.ds-secondary:focus-visible{outline:3px solid #8998f5;outline-offset:3px}.ds-secondary:hover{filter:brightness(.96)}.ds-secondary:disabled{opacity:.55;cursor:default}"
+    },
+    {
+      "name": "Destructive Button",
+      "kind": "button",
+      "description": "Eliminar cotización",
+      "html": "<button class=\"ds-danger\">Eliminar cotización</button>",
+      "css": ".ds-danger{background:#b74741;color:#fff;border:0;border-radius:7px;padding:10px 13px;min-height:39px;font:600 12px \"DM Sans\",sans-serif;}.ds-danger:focus-visible{outline:3px solid #8998f5;outline-offset:3px}.ds-danger:hover{filter:brightness(.96)}.ds-danger:disabled{opacity:.55;cursor:default}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "description": "Buscar cotización",
+      "html": "<input class=\"ds-input\" aria-label=\"Buscar cotización\" placeholder=\"Buscar cotización\" />",
+      "css": ".ds-input{background:#fff;color:var(--ink,#202534);border:1px solid #dce0e8;border-radius:7px;min-height:38px;padding:8px 10px;font:12px \"DM Sans\",sans-serif;}.ds-input:focus-visible{outline:3px solid #8998f5;outline-offset:3px}"
+    },
+    {
+      "name": "Active Navigation",
+      "kind": "nav",
+      "description": "Resumen",
+      "html": "<button class=\"ds-nav\">Resumen</button>",
+      "css": ".ds-nav{background:#303e80;color:#f1f3ff;border:0;border-radius:7px;text-align:left;padding:12px 13px;font:500 13px \"DM Sans\",sans-serif;}.ds-nav:focus-visible{outline:3px solid #8998f5;outline-offset:3px}.ds-nav:hover{filter:brightness(.96)}.ds-nav:disabled{opacity:.55;cursor:default}"
+    },
+    {
+      "name": "Selected Filter",
+      "kind": "chip",
+      "description": "Postergadas",
+      "html": "<button class=\"ds-chip\">Postergadas</button>",
+      "css": ".ds-chip{background:var(--accent-soft,#eef1ff);color:var(--accent,#3044d7);border:1px solid #c9d1fa;border-radius:6px;padding:7px 8px;font:10px \"DM Sans\",sans-serif;}.ds-chip:focus-visible{outline:3px solid #8998f5;outline-offset:3px}.ds-chip:hover{filter:brightness(.96)}.ds-chip:disabled{opacity:.55;cursor:default}"
+    },
+    {
+      "name": "Capacity Panel",
+      "kind": "card",
+      "description": "Horas pendientes / capacidad semanal",
+      "html": "<section class=\"ds-panel\">Horas pendientes / capacidad semanal</section>",
+      "css": ".ds-panel{background:#fff;color:var(--ink,#202534);border:1px solid var(--border,#e8ebf0);border-radius:11px;padding:20px;font:12px \"DM Sans\",sans-serif;}.ds-panel:focus-visible{outline:3px solid #8998f5;outline-offset:3px}",
+      "refersTo": "panel"
+    },
+    {
+      "name": "Person Avatar",
+      "kind": "custom",
+      "description": "AT",
+      "html": "<span class=\"ds-avatar\">AT</span>",
+      "css": ".ds-avatar{display:grid;place-items:center;background:#5363ca16;color:#465166;width:35px;height:35px;border-radius:50%;font:600 11px \"DM Sans\",sans-serif;}.ds-avatar:focus-visible{outline:3px solid #8998f5;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Precise daylight operations workspace",
+    "overview": "Mode: Operate. The implemented interface is the final visual authority for this new surface. Preserve its warm paper, charcoal navigation, cobalt actions and restrained operational density when extending the authorized MVP. PRODUCT.md owns the product scope and demonstration boundaries.\n\nThe dashboard prioritizes commitments, ownership and hours. The six indicators form a ruled strip; capacity lanes and the quotation ledger follow in a clear reading order. Spanish copy and self-hosted DM Sans keep the experience consistent across operational screens.",
+    "keyCharacteristics": [
+      "Flat paper surfaces with fine dividers.",
+      "Cobalt actions and restrained semantic status colors.",
+      "Tabular numbers, readable ownership and visible commitments.",
+      "Responsive navigation and deliberately scrollable data regions."
+    ],
+    "rules": [
+      {
+        "name": "The Legible Metadata Rule",
+        "body": "Preserve contrast on the actual background, including small supporting text. Person colors tint avatar backgrounds only; initials use the fixed avatar-ink token, including when imported person colors are very light.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve the paper, charcoal and cobalt hierarchy.",
+      "Do use muted ink for supporting operational text and fixed dark initials on tinted avatars.",
+      "Do keep numeric data tabular and label operational states in words.",
+      "Do maintain inert closed mobile navigation, visible focus and reduced-motion support.",
+      "Do retain the synthetic-data, local persistence and heuristic-risk boundaries in visible copy."
+    ],
+    "donts": [
+      "Don't imply real authentication, shared server persistence, statistical prediction or sent client messages.",
+      "Don't compress wide tables into unreadable mobile columns.",
+      "Don't add ornamental shadows or decorative imagery to operational panels."
+    ]
+  },
+  "evidence": {
+    "authority": [
+      "src/styles.css",
+      "src/components.tsx",
+      "src/App.tsx",
+      "PRODUCT.md"
+    ],
+    "screenshots": [
+      ".impeccable/review/desktop-final.png",
+      ".impeccable/review/mobile-final.png"
+    ],
+    "automatedAccessibility": {
+      "artifact": ".impeccable/review/a11y-fixed.json",
+      "overviewViolations": 0,
+      "targetedSurfacesPassed": [
+        "overview",
+        "drawer",
+        "history",
+        "settings",
+        "report"
+      ],
+      "includes": "Imported light avatar backgrounds"
+    },
+    "verification": {
+      "build": "passed",
+      "domainTestsPassed": 18,
+      "browserTestsPassed": 13,
+      "tabletBoundaryCorrection": "Verified: fresh production build and keyboard regression at390/820; deployed smoke checks pass with no runtime errors"
+    },
+    "demoBoundaries": [
+      "Synthetic quotations",
+      "Browser-local persistence and tab synchronization",
+      "Role views are demonstrations",
+      "Risk is explainable heuristic",
+      "Client messages are copyable drafts without external sending"
+    ]
+  }
+}
