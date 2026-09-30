@@ -25,3 +25,6 @@ Uploaded epic and extracted requirements in /workspace/docs/superpowers. No supp
 
 ## Product Principles
 Computed delivery state; traceable commitments; actionable alerts; honestly labeled demonstration; working controls.
+
+## Presentation refinement
+Existing MVP refined for the user's next-day boss presentation: nonmutating six-step guide, actionable metrics, persistent hash navigation/back, protected unsaved drafts, pending/validation states, original damaged-file recovery and confirmed replacement, truthful alert save results, offline readiness/status and full cached views after an initial online load. Static Vercel Hobby hosting remains; no paid integrations, backend, real identity or sent communications introduced.

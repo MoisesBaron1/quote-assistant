@@ -9,8 +9,10 @@ export type Load = Person & {hours:number;count:number;percent:number};
 export type Move = {quoteId:string;from:string;to:string;hours:number};
 export const workflows:Workflow[]=['Pendiente','En curso','En revisión','Lista para enviar','Entregada'];
 export const priorities:Priority[]=['Normal','Alta','Crítica'];
+const businessFormats=new Map<string,Intl.DateTimeFormat>();
 export function businessDate(now:Date,timezone='UTC'):string {
-  const parts=new Intl.DateTimeFormat('en-US',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
+  let formatter=businessFormats.get(timezone);if(!formatter){formatter=new Intl.DateTimeFormat('en-US',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit'});businessFormats.set(timezone,formatter);}
+  const parts=formatter.formatToParts(now);
   return ['year','month','day'].map(key=>parts.find(p=>p.type===key)!.value).join('-');
 }
 function isDay(day:unknown):day is string {
@@ -36,10 +38,10 @@ export function delivery(quote:Quote,today:string):Delivery {
 export function risk(quote:Quote,today:string,capacity:number,alertDays:number):{level:'Bajo'|'Medio'|'Alto';reason:string} {
   if(isTerminal(quote))return {level:'Bajo',reason:'Trabajo finalizado'};
   const days=daysRemaining(quote.dueDate,today);
-  if(days<0)return {level:'Alto',reason:`El compromiso venció hace ${Math.abs(days)} día(s)`};
+  if(days<0)return {level:'Alto',reason:`El compromiso venció hace ${Math.abs(days)} ${Math.abs(days)===1?'día':'días'}`};
   const available=Math.max(1,days+1)*capacity/5;
   if(quote.remainingHours>available)return {level:'Alto',reason:`${quote.remainingHours} h pendientes superan las ${Math.round(available)} h nominales disponibles hasta la entrega`};
-  if(days<=alertDays||quote.remainingHours>available*.7)return {level:'Medio',reason:days===0?'La entrega vence hoy':`Entrega en ${days} día(s); conviene revisar el avance`};
+  if(days<=alertDays||quote.remainingHours>available*.7)return {level:'Medio',reason:days===0?'La entrega vence hoy':`Entrega en ${days} ${days===1?'día':'días'}; conviene revisar el avance`};
   return {level:'Bajo',reason:'Plazo suficiente para las horas pendientes declaradas'};
 }
 export function workload(quotes:Quote[],people:Person[]):Load[] {

@@ -1,7 +1,5 @@
 import {createRoot} from 'react-dom/client';
 import App from './App';
-import '@fontsource/dm-sans/latin-400.css';
-import '@fontsource/dm-sans/latin-500.css';
-import '@fontsource/dm-sans/latin-600.css';
-import '@fontsource/dm-sans/latin-700.css';
+import './fonts.css';
+if(import.meta.env.PROD&&'serviceWorker' in navigator){window.addEventListener('load',()=>{void navigator.serviceWorker.register('/sw.js').catch(()=>{/* The online app stays usable when offline caching is unavailable. */});});}
 createRoot(document.getElementById('root')!).render(<App/>);

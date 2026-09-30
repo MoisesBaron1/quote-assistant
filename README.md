@@ -4,6 +4,8 @@ MVP de demostración en español construido a partir de la épica adjunta y ampl
 
 ## Presentación
 
+Activa el icono **Guía de presentación** en la barra superior para recorrer los seis módulos sin modificar datos.
+
 1. Abre Resumen: indicadores de entrega, capacidad y cotizaciones críticas.
 2. Abre una cotización: responsables, fechas original/vigente, comentarios e historial.
 3. En Equipo, usa Equilibrar carga para revisar y aplicar una propuesta.
@@ -34,6 +36,8 @@ npm run build
 npx playwright test
 ```
 
+Las pruebas de navegador usan los servidores locales en 5173 (desarrollo) y 4173 (preview de producción, para offline). Antes de ejecutarlas, inicia `npm run dev` y, en otra terminal, `npm run build && npm run preview -- --port 4173`.
+
 La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajusta `executablePath` o instala el navegador de Playwright en otro equipo. Los tests cubren reglas de negocio, flujos principales, conflictos entre pestañas, almacenamiento fallido y controles WCAG automatizados. La inspección visual complementa las pruebas.
 
 ## Despliegue
@@ -43,3 +47,11 @@ La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajust
 Para operar con datos reales: añadir identidad y permisos en servidor, almacenamiento autoritativo, auditoría protegida y sincronización entre usuarios; conectar la fuente de cotizaciones y aprobar las reglas de trabajo. Estas capacidades no están presentes en la demo.
 
 Demo publicada y verificada en la cuenta del usuario: https://epica-dashboard-two.vercel.app. Despliegue de producción en el plan gratuito Hobby de Vercel, con build local y solo archivos estáticos. No se contrataron servicios adicionales; aplican los límites y condiciones de Hobby. Este enlace reemplaza el despliegue temporal.
+
+## Preparación para una presentación
+
+Abre la app con internet y espera a **Disponible sin conexión** en el pie. El build precarga los archivos estáticos, incluidos los módulos secundarios, y permite recargar y editar offline en navegadores compatibles. Los cachés se versionan y se conservan la versión actual y una anterior; las actualizaciones no borran cotizaciones. El estado offline considera también fallos reales de la navegación.
+
+Las vistas mantienen una URL con hash y admiten recarga/atrás. Los indicadores abren sus filtros, los formularios protegen borradores y evitan doble envío, los errores llevan el foco al campo que necesita corrección, y los datos locales dañados pueden descargarse y reemplazarse de forma confirmada. Si un módulo no carga hay un camino de recuperación.
+
+Recorrido de cinco minutos: [guía de presentación](docs/guia-presentacion.md).

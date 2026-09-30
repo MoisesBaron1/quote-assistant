@@ -207,5 +207,22 @@
       "Risk is explainable heuristic",
       "Client messages are copyable drafts without external sending"
     ]
+  },
+  "presentationRefinement": {
+    "date": "2026-09-30",
+    "mode": "Operate",
+    "identity": "preserved",
+    "capabilities": [
+      "six-step nonmutating guide",
+      "actionable metrics",
+      "hash navigation",
+      "guarded drafts and validation focus",
+      "offline status/readiness",
+      "pending and view-error recovery"
+    ],
+    "mobileFormType": "16px, single column",
+    "evidence": "18 domain +26 browser scenarios pass; all-module/guide WCAG; desktop/mobile batched visual inspection",
+    "fonts": "DM Sans WOFF2 only",
+    "remainingBoundary": "synthetic data; browser persistence and simulated role views"
   }
 }

@@ -130,3 +130,11 @@ Review evidence: desktop and mobile captures are in `.impeccable/review/desktop-
 - **Don't** imply real authentication, shared server persistence, statistical prediction or sent client messages.
 - **Don't** compress wide tables into unreadable mobile columns.
 - **Don't** add ornamental shadows or decorative imagery to operational panels.
+
+## Presentation refinements — 2026-09-30
+
+Preserve the daylight visual authority. The upper-bar presentation icon opens a compact pale-cobalt six-step guide above the existing content; it uses the same controls, type and panel rhythm. Metric lanes are actionable buttons with descriptive labels. Views have loading/recovery states; forms announce validation, focus the first error, protect dirty drafts and show pending saves. Mobile form controls use 16px type to avoid focus zoom and a single-column layout. The existing drawer keeps a narrow backdrop edge on small screens and scrolls within the viewport.
+
+Offline status appears only when applicable; readiness is shown in the footer after the production static cache becomes available. Fonts remain DM Sans, WOFF2 only. Secondary alerts/activity labels use muted ink. Native dialogs handle cancel with the current state so protected edits survive Escape.
+
+Verification: 18 domain tests and 26 browser scenarios pass, including offline reload/edit/all secondary modules, JSON roundtrip/cancel, clipboard, print/PDF, network-failure recovery and WCAG checks across all modules and the guide. One batched desktop/mobile visual review completed; mobile native-dialog full-page capture was replaced with a valid viewport capture. The pinned identity is preserved.

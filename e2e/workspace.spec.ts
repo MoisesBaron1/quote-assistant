@@ -129,3 +129,9 @@ test('key surfaces meet automated WCAG checks including imported light avatars',
   await audit('overview');await page.getByRole('button',{name:'Abrir Q-10300'}).click();await audit('drawer');await page.getByRole('button',{name:/^Historial/}).click();await audit('history');await page.getByRole('button',{name:'Cerrar detalle'}).click();
   await page.getByRole('button',{name:'Configuración',exact:true}).click();await audit('settings');await page.getByRole('button',{name:'Resumen ejecutivo',exact:true}).click();await audit('report');
 });
+
+test('additional views and the presentation guide pass automated WCAG checks',async({page})=>{
+ await page.addScriptTag({path:'node_modules/axe-core/axe.min.js'});
+ for(const name of ['Equipo','Calendario','Alertas','Actividad']){await page.getByRole('button',{name,exact:true}).click();await expect(page.locator('.view-loading')).toHaveCount(0);const failures=await page.evaluate(async()=>{const r=await (window as any).axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});return r.violations.map((v:any)=>({id:v.id,nodes:v.nodes.map((n:any)=>n.target)}));});expect(failures,name).toEqual([]);}
+ await page.getByRole('button',{name:'Guía de presentación',exact:true}).click();const failures=await page.evaluate(async()=>{const r=await (window as any).axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}});return r.violations.map((v:any)=>({id:v.id,nodes:v.nodes.map((n:any)=>n.target)}));});expect(failures,'presentation guide').toEqual([]);
+});
