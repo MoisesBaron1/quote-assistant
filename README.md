@@ -42,4 +42,4 @@ La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajust
 
 Para operar con datos reales: añadir identidad y permisos en servidor, almacenamiento autoritativo, auditoría protegida y sincronización entre usuarios; conectar la fuente de cotizaciones y aprobar las reglas de trabajo. Estas capacidades no están presentes en la demo.
 
-Demo publicada y verificada: https://temporary-zippy-comet-gt96xu1.vercel.app. El despliegue anónimo vence el30 de septiembre de2026 a las18:50 UTC salvo que su propietario lo reclame mediante el enlace entregado en la conversación. Reclamarlo requiere iniciar sesión en una cuenta de Vercel.
+Demo publicada y verificada en la cuenta del usuario: https://epica-dashboard-two.vercel.app. Despliegue de producción en el plan gratuito Hobby de Vercel, con build local y solo archivos estáticos. No se contrataron servicios adicionales; aplican los límites y condiciones de Hobby. Este enlace reemplaza el despliegue temporal.
