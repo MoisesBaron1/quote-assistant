@@ -1,4 +1,4 @@
-# Epica · Live Quotation Tracking
+# Quote Assistant · Live Quotation Tracking
 
 MVP de demostración en español construido a partir de la épica adjunta y ampliado por autorización del usuario. React, TypeScript y Vite; tipografía alojada con el sitio.
 
@@ -46,7 +46,9 @@ La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajust
 
 Para operar con datos reales: añadir identidad y permisos en servidor, almacenamiento autoritativo, auditoría protegida y sincronización entre usuarios; conectar la fuente de cotizaciones y aprobar las reglas de trabajo. Estas capacidades no están presentes en la demo.
 
-Demo publicada y verificada en la cuenta del usuario: https://epica-dashboard-two.vercel.app. Despliegue de producción en el plan gratuito Hobby de Vercel, con build local y solo archivos estáticos. No se contrataron servicios adicionales; aplican los límites y condiciones de Hobby. Este enlace reemplaza el despliegue temporal.
+Demo publicada y verificada en la cuenta del usuario: https://quote-assistant-moises.vercel.app. Despliegue de producción en el plan gratuito Hobby de Vercel, con build local y solo archivos estáticos. No se contrataron servicios adicionales; aplican los límites y condiciones de Hobby. Este enlace reemplaza el despliegue temporal.
+
+El enlace anterior, https://epica-dashboard-two.vercel.app, conserva acceso a las cotizaciones guardadas en ese navegador y ahora muestra Quote Assistant. El subdominio nuevo tiene almacenamiento separado por las reglas del navegador; para trasladar cambios, descarga el respaldo JSON en el enlace anterior e impórtalo en el nuevo. Se conservó el identificador interno de almacenamiento para proteger la compatibilidad.
 
 ## Preparación para una presentación
 

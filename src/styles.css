@@ -25,3 +25,5 @@ button.metric{text-align:left;min-width:0;border-radius:0}button.metric:hover{ba
 .global-search{min-width:0}
 .alert-copy>span{color:var(--muted)}
 .activity-list p{color:var(--muted)}
+
+.brand-name{display:flex;flex-direction:column;gap:1px;font-size:18px;line-height:1.1;letter-spacing:-.025em}.brand-mark{flex-shrink:0}

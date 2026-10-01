@@ -2,6 +2,7 @@ import {useEffect,useRef,useState} from 'react';
 import {businessDate,parseBackup} from './domain';
 import {createDemo,initialPeople} from './data';
 import type {Workspace} from './data';
+// Retain the legacy namespace to preserve saved quotations and cross-tab locking after rebranding.
 export const STORAGE_KEY='epica-workspace-v1';
 export function restoreWorkspace(raw:string):Workspace {
   const data=JSON.parse(raw),checked=parseBackup(raw,initialPeople);

@@ -1,5 +1,5 @@
 ---
-name: Epica
+name: Quote Assistant
 description: Precise daylight quotation operations workspace
 colors:
   accent: "#3044d7"
@@ -59,7 +59,7 @@ components:
     rounded: "{rounded.panel}"
 ---
 
-# Design System: Epica
+# Design System: Quote Assistant
 
 ## Overview
 

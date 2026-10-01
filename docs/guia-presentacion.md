@@ -1,8 +1,10 @@
-# Epica — guía de presentación (aprox. 5 minutos)
+# Quote Assistant — guía de presentación (aprox. 5 minutos)
 
-Abre https://epica-dashboard-two.vercel.app en el navegador y equipo que usarás para presentar. Déjala cargar con internet hasta que el pie de página indique **Disponible sin conexión**. Los datos se conservan en ese navegador; puedes descargar un respaldo JSON desde Configuración. La app y el subdominio están en el plan Hobby gratuito, con sus límites y condiciones.
+Abre https://quote-assistant-moises.vercel.app en el navegador y equipo que usarás para presentar. Déjala cargar con internet hasta que el pie de página indique **Disponible sin conexión**. Los datos se conservan en ese navegador; puedes descargar un respaldo JSON desde Configuración. La app y el subdominio están en el plan Hobby gratuito, con sus límites y condiciones.
 
 Pulsa el icono de presentación en la barra superior para abrir **Guía de presentación**. El recorrido no modifica las cotizaciones.
+
+Si ya habías editado cotizaciones en el enlace anterior, puedes seguir usando ese enlace con la nueva marca. Para trasladarlas al nuevo subdominio, descarga el respaldo JSON allí e impórtalo en la nueva dirección; cada dominio guarda sus datos por separado.
 
 1. **Resumen (45 s).** Muestra los seis indicadores y la carga del equipo. Pulsa Retrasadas para abrir sus cotizaciones filtradas; limpia el filtro antes de continuar.
 2. **Cotizaciones (60 s).** Abre una cotización. Enseña responsables, fecha original y fecha vigente. Edita un comentario y guarda; entra a Historial para mostrar el registro. Los borradores piden confirmación antes de descartarlos.

@@ -1,4 +1,4 @@
-# Epica
+# Quote Assistant
 <!-- impeccable:product-schema 1 -->
 
 ## Platform
