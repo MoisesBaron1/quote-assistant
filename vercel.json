@@ -21,6 +21,26 @@
       ]
     },
     {
+      "source": "/descargas/quote-assistant-promocion-y-guia.mp4",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"quote-assistant-promocion-y-guia.mp4\"" }]
+    },
+    {
+      "source": "/descargas/quote-assistant-guia-presentacion.pdf",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"quote-assistant-guia-presentacion.pdf\"" }]
+    },
+    {
+      "source": "/descargas/quote-assistant-guia-presentacion.md",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"quote-assistant-guia-presentacion.md\"" }]
+    },
+    {
+      "source": "/descargas/quote-assistant-informe-demo.pdf",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"quote-assistant-informe-demo.pdf\"" }]
+    },
+    {
+      "source": "/descargas/quote-assistant-subtitulos.srt",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"quote-assistant-subtitulos.srt\"" }]
+    },
+    {
       "source": "/sw.js",
       "headers": [
         {

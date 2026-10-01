@@ -1,0 +1,50 @@
+import {copyFile, mkdir, readFile, stat, writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {chromium} from '@playwright/test';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const source=path.resolve(process.argv[2]||path.join(root,'../shared/downloads'));
+const destination=path.join(root,'public/descargas');
+await mkdir(destination,{recursive:true});
+for(const name of ['quote-assistant-promocion-y-guia.mp4','quote-assistant-subtitulos.srt','quote-assistant-informe-demo.pdf']){
+  await copyFile(path.join(source,name),path.join(destination,name));
+}
+const markdown=await readFile(path.join(root,'docs/guia-presentacion.md'),'utf8');
+await writeFile(path.join(destination,'quote-assistant-guia-presentacion.md'),markdown);
+
+const escape=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const inline=value=>escape(value).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/https:\/\/[a-zA-Z0-9./-]+/g,url=>`<a href="${url}">${url}</a>`);
+const blocks=markdown.trim().split(/\n\s*\n/).map(block=>{
+  if(block.startsWith('# '))return `<h1>${inline(block.slice(2))}</h1>`;
+  if(/^\d+\. /m.test(block))return '<ol>'+block.split('\n').map(line=>`<li>${inline(line.replace(/^\d+\. /,''))}</li>`).join('')+'</ol>';
+  return `<p>${inline(block.replaceAll('\n',' '))}</p>`;
+}).join('\n');
+const logo=await readFile(path.join(root,'public/favicon.svg'),'utf8');
+const guide=`<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Quote Assistant — guía de presentación</title><style>
+@page{size:A4;margin:16mm}*{box-sizing:border-box}body{font:14px/1.4 Arial,sans-serif;color:#202534;margin:0}header{display:flex;align-items:center;gap:12px;border-bottom:1px solid #dde1e8;padding-bottom:14px;margin-bottom:20px}header svg{width:36px;height:36px}header strong{font-size:20px;color:#171b2b}h1{font-size:26px;line-height:1.18;letter-spacing:-.7px;margin:0 0 20px;color:#171b2b}p{margin:0 0 14px}li{padding-left:5px;margin-bottom:12px;break-inside:avoid}ol{padding-left:22px}a{color:#3044d7;overflow-wrap:anywhere}footer{position:fixed;bottom:0;left:0;right:0;font-size:11px;color:#626a7a;border-top:1px solid #dde1e8;padding-top:6px}</style></head><body><header>${logo}<strong>Quote Assistant</strong></header>${blocks}<footer>Materiales de presentación · Demo con datos de ejemplo</footer></body></html>`;
+const browser=await chromium.launch({executablePath:process.env.QUOTE_ASSISTANT_BROWSER_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+try{
+  const page=await browser.newPage();
+  await page.setContent(guide,{waitUntil:'load'});
+  await page.pdf({path:path.join(destination,'quote-assistant-guia-presentacion.pdf'),format:'A4',printBackground:true,preferCSSPageSize:true});
+}finally{await browser.close();}
+
+const bytes=name=>stat(path.join(destination,name)).then(info=>info.size);
+const videoSize=await bytes('quote-assistant-promocion-y-guia.mp4');
+const pdfSize=await bytes('quote-assistant-guia-presentacion.pdf');
+const downloadIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4"/></svg>';
+const html=`<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#3044d7"><meta name="description" content="Descarga el video y la guía de presentación de Quote Assistant en tu teléfono."><meta name="robots" content="noindex"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Descargas · Quote Assistant</title><style>
+:root{font-family:Arial,system-ui,sans-serif;color:#202534;background:#f7f8fa;font-synthesis:none}*{box-sizing:border-box}body{margin:0}a{color:#3044d7;text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #3044d7;outline-offset:5px}header,main,footer{max-width:940px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid #dde1e8}.brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;color:#171b2b}.brand img{width:36px;height:36px}.back{font-size:14px;font-weight:600}main{padding-top:48px;padding-bottom:28px}.eyebrow{font-size:12px;font-weight:700;color:#3044d7;letter-spacing:1px;text-transform:uppercase}h1{font-size:clamp(32px,5vw,46px);line-height:1.08;letter-spacing:-1.4px;color:#171b2b;max-width:650px;margin:16px 0}p{font-size:16px;line-height:1.6;margin:0 0 16px}.intro{color:#626a7a;max-width:600px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:30px 0 24px}.card{background:white;border:1px solid #dde1e8;border-radius:14px;padding:26px;display:flex;flex-direction:column;min-width:0}h2{font-size:22px;letter-spacing:-.4px;color:#171b2b;margin:12px 0}.format{font-size:12px;font-weight:700;letter-spacing:.6px;color:#3044d7}.card p{font-size:15px;color:#626a7a}.meta{font-size:13px;color:#626a7a;margin:0 0 20px}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#3044d7;border-radius:8px;color:white;text-decoration:none;font-size:15px;font-weight:700;min-height:48px;padding:14px 18px;margin-top:auto}.button:hover{background:#2536b4}.button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.secondary{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px}.secondary a{display:inline-flex;align-items:center;min-height:44px}.help{margin-top:32px;padding:26px;background:#eef1ff;border-radius:14px}.help h2{margin-top:0}.help h3{font-size:16px;margin:22px 0 8px}.help p{font-size:15px}.help p:last-child{margin-bottom:0}.delete{margin-top:24px;padding:0 2px}.delete h2{font-size:19px}.delete p{font-size:14px;color:#626a7a}footer{font-size:12px;line-height:1.6;color:#626a7a;border-top:1px solid #dde1e8;padding-top:20px;padding-bottom:30px}@media(max-width:580px){header,main,footer{padding-left:20px;padding-right:20px}main{padding-top:32px}.brand{font-size:18px}.brand img{width:30px;height:30px}.back{font-size:12px}.cards{grid-template-columns:1fr}.card,.help{padding:22px}h1{letter-spacing:-1px}.secondary{gap:0 20px}}
+</style></head><body>
+<header><div class="brand"><img src="/favicon.svg" alt="">Quote Assistant</div><a class="back" href="/">Abrir la app</a></header>
+<main><div class="eyebrow">Materiales de presentación</div><h1>Quote Assistant,<br>listo para presentar.</h1><p class="intro">Guarda el video y la guía en tu teléfono para tenerlos a mano. Elige el archivo que quieras descargar.</p>
+<section class="cards" aria-label="Archivos para descargar"><article class="card"><span class="format">VIDEO · MP4</span><h2>Promoción y guía de uso</h2><p>Un recorrido por las funciones principales, con voz y subtítulos en español.</p><div class="meta">2:19 · Full HD · ${Math.round(videoSize/1_000_000)} MB</div><a class="button" href="/descargas/quote-assistant-promocion-y-guia.mp4" download>${downloadIcon}Descargar video</a></article><article class="card"><span class="format">DOCUMENTO · PDF</span><h2>Guía de presentación</h2><p>El recorrido de cinco minutos para mostrar la demo, con pasos y consejos de preparación.</p><div class="meta">Lectura de 5 minutos · ${Math.round(pdfSize/1000)} KB</div><a class="button" href="/descargas/quote-assistant-guia-presentacion.pdf" download>${downloadIcon}Descargar guía</a></article></section>
+<div class="secondary"><a href="/descargas/quote-assistant-guia-presentacion.md" download>Guía en texto editable</a><a href="/descargas/quote-assistant-subtitulos.srt" download>Subtítulos separados</a><a href="/descargas/quote-assistant-informe-demo.pdf" download>Informe de ejemplo PDF</a></div>
+<section class="help" aria-labelledby="save-title"><h2 id="save-title">Guardar en el teléfono</h2><p>Si abriste esta página dentro del chat, ábrela en Safari o Chrome para descargar.</p><h3>iPhone</h3><p>Si se abre el archivo, toca <strong>Compartir → Guardar en Archivos → En mi iPhone</strong> y elige una carpeta. Si Safari lo descarga directamente, búscalo en <strong>Archivos → Descargas</strong>. Puedes elegir almacenamiento local desde <strong>Ajustes → Apps → Safari → Descargas → En mi iPhone</strong>; en versiones anteriores, Safari aparece directamente en Ajustes.</p><h3>Android</h3><p>Pulsa <strong>Descargar</strong> en Chrome. Busca el archivo en <strong>Archivos → Descargas</strong>, o abre el menú de Chrome y entra en <strong>Descargas</strong>.</p></section>
+<section class="delete"><h2>Cuando quieras eliminarlos</h2><p>En Archivos o tu administrador de archivos, mantén pulsado el video o la guía y elige <strong>Eliminar</strong>. Si existe una Papelera o carpeta Eliminado recientemente, vacíala para borrarlos definitivamente.</p><p>Borrar un archivo del teléfono elimina esa copia. Los materiales publicados en este sitio se administran desde el proyecto de Quote Assistant.</p></section>
+</main><footer>Quote Assistant · Materiales públicos de la demo, con datos de ejemplo.</footer></body></html>`;
+await writeFile(path.join(destination,'index.html'),html);
+await copyFile(path.join(destination,'quote-assistant-guia-presentacion.pdf'),path.join(source,'quote-assistant-guia-presentacion.pdf'));
+console.log(JSON.stringify({directory:destination,videoBytes:videoSize,guidePdfBytes:pdfSize,files:['index.html','quote-assistant-promocion-y-guia.mp4','quote-assistant-guia-presentacion.pdf','quote-assistant-guia-presentacion.md','quote-assistant-subtitulos.srt','quote-assistant-informe-demo.pdf']},null,2));

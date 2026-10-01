@@ -7,3 +7,4 @@ playwright-report/
 *.tsbuildinfo
 .impeccable/review/
 .vercel
+public/descargas/*.mp4

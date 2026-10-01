@@ -52,6 +52,8 @@ El enlace anterior, https://epica-dashboard-two.vercel.app, conserva acceso a la
 
 ## Preparación para una presentación
 
+Los materiales para guardar en el teléfono están en https://quote-assistant-moises.vercel.app/descargas/: video MP4, guía PDF, texto editable, subtítulos e informe de ejemplo. La página explica cómo guardarlos y eliminarlos en iPhone y Android. Las copias de trabajo y de Vercel se documentan en [docs/entrega-archivos.md](docs/entrega-archivos.md). No se subieron archivos a Google Drive.
+
 Abre la app con internet y espera a **Disponible sin conexión** en el pie. El build precarga los archivos estáticos, incluidos los módulos secundarios, y permite recargar y editar offline en navegadores compatibles. Los cachés se versionan y se conservan la versión actual y una anterior; las actualizaciones no borran cotizaciones. El estado offline considera también fallos reales de la navegación.
 
 Las vistas mantienen una URL con hash y admiten recarga/atrás. Los indicadores abren sus filtros, los formularios protegen borradores y evitan doble envío, los errores llevan el foco al campo que necesita corrección, y los datos locales dañados pueden descargarse y reemplazarse de forma confirmada. Si un módulo no carga hay un camino de recuperación.
