@@ -6,5 +6,6 @@ test-results/
 playwright-report/
 *.tsbuildinfo
 .impeccable/review/
+.superpowers/
 .vercel
 public/descargas/*.mp4

@@ -14,6 +14,7 @@ test('create, edit, history and reload preserve a quotation',async({page})=>{
   await page.getByRole('button',{name:'Nueva cotización'}).click();
   await page.getByLabel('Proyecto',{exact:true}).fill('Proyecto prueba de aceptación');
   await page.getByLabel('Cliente',{exact:true}).fill('Cliente de prueba');
+  await page.getByLabel('Tipo de cotización',{exact:true}).selectOption('Proyecto menor');await page.getByLabel('Fecha de asignación',{exact:true}).fill('2026-10-02');await page.getByLabel('Fecha base manual',{exact:true}).fill('2026-10-09');
   await page.getByRole('button',{name:'Crear cotización',exact:true}).click();
   await expect(page.getByText('Cotización creada')).toBeVisible();
   await page.getByRole('searchbox',{name:'Buscar cotizaciones'}).fill('Proyecto prueba de aceptación');
@@ -40,7 +41,7 @@ test('role views change consultation scope and expose no editing action for acco
   await expect(page.getByRole('button',{name:'Nueva cotización'})).toHaveCount(0);
   await page.getByLabel('Usuario de la vista').selectOption('Daniel López');
   await page.getByRole('button',{name:'Cotizaciones',exact:true}).click();
-  await expect(page.locator('tbody tr')).toHaveCount(8);
+  await page.getByRole('button',{name:'Tabla',exact:true}).click();await expect(page.locator('tbody tr')).toHaveCount(8);
 });
 test('calendar, alerts, settings, export and executive report are usable',async({page})=>{
   await page.getByRole('button',{name:'Calendario',exact:true}).click();

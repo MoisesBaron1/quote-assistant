@@ -1,10 +1,10 @@
 # Quote Assistant — ubicación de los materiales
 
-Página de descarga: https://quote-assistant-moises.vercel.app/descargas/
+Página de descarga de la actualización: https://quote-assistant-moi.vercel.app/descargas/
 
 El video y la guía se guardan en el teléfono cuando el usuario los descarga y selecciona una ubicación. En iPhone puede elegir **En mi iPhone** en Guardar en Archivos, o configurar las descargas de Safari allí. En Android normalmente se guardan en **Archivos → Descargas**. La página explica cómo borrar esas copias y vaciar la papelera cuando corresponde.
 
-No se subieron archivos a Google Drive. Las copias de trabajo de esta sesión están en `/workspace/shared/downloads`; el proyecto editable del video está en `/workspace/videos/quote-assistant-video`, incluido su MP4 original en `renders/`. La copia destinada a publicación está en `public/descargas` de este repositorio y se sirve como archivos estáticos del proyecto existente de Vercel. El MP4 generado queda fuera de Git para mantener ligero el código fuente.
+No se subieron archivos a Google Drive. Las copias de trabajo de esta sesión están en `/workspace/shared/downloads`; el proyecto editable del video está en `/workspace/videos/quote-assistant-video`, incluido su MP4 original en `renders/`. La copia destinada a publicación está en `public/descargas` de este repositorio y se sirve como archivos estáticos del proyecto `quote-assistant-moi`, en el equipo `moi` de Vercel. El MP4 generado queda fuera de Git para mantener ligero el código fuente. Las publicaciones anteriores permanecen en sus enlaces originales.
 
 Para regenerar la entrega, mantén el MP4 y el SRT en una carpeta y ejecuta `npm run prepare:downloads -- /ruta/a/los/materiales`. El script copia esos activos, transforma `docs/guia-presentacion.md` en PDF y texto, y genera la página para teléfonos. Requiere Chromium; usa `QUOTE_ASSISTANT_BROWSER_PATH` para seleccionar otro ejecutable. El build del MVP no precarga estos materiales en la caché offline: la descarga se inicia al pulsar el enlace.
 

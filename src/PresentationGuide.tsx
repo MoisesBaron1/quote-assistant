@@ -1,7 +1,7 @@
 import {ArrowLeft,ArrowRight,Check,Play,X} from 'lucide-react';
 export const presentationSteps=[
   {tab:'overview',title:'Compromisos visibles',text:'Empieza por los seis indicadores. Muestra qué está a tiempo, qué venció y cómo se reparte la carga.'},
-  {tab:'quotes',title:'El contexto de cada cotización',text:'Abre un proyecto para mostrar responsables, fecha original, avance y comentarios. El historial conserva los cambios.'},
+  {tab:'quotes',title:'El contexto de cada cotización',text:'Compara Tarjetas y Tabla. Abre una cotización para mostrar tipo, takeoff, responsable y entrega final. El historial conserva el compromiso original.'},
   {tab:'team',title:'Carga y decisiones de asignación',text:'Compara las horas pendientes con la capacidad semanal. Revisa una propuesta de redistribución antes de aplicarla.'},
   {tab:'calendar',title:'Una semana de compromisos',text:'Recorre las entregas de la semana. Puedes abrir cada cotización y volver a la fecha de hoy.'},
   {tab:'alerts',title:'Priorizar el seguimiento',text:'Revisa los compromisos vencidos y el riesgo explicado. Prepara un mensaje o marca una alerta como revisada.'},

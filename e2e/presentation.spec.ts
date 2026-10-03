@@ -27,7 +27,7 @@ test('all validation failures are announced and focus the first invalid field',a
 });
 test('dashboard indicator opens the corresponding actionable filter',async({page})=>{
  await expect(page.getByRole('button',{name:'Ver cotizaciones retrasadas',exact:false})).toBeVisible();await page.getByRole('button',{name:'Ver cotizaciones retrasadas',exact:false}).click();
- await expect(page.getByRole('button',{name:'Retrasadas',exact:true})).toHaveAttribute('aria-pressed','true');await expect(page.locator('tbody tr')).toHaveCount(2);await page.getByRole('button',{name:'Limpiar filtros'}).first().click();await expect(page.locator('tbody tr')).toHaveCount(8);
+ await expect(page.getByRole('button',{name:'Retrasadas',exact:true})).toHaveAttribute('aria-pressed','true');await page.getByRole('button',{name:'Tabla',exact:true}).click();await expect(page.locator('tbody tr')).toHaveCount(2);await page.getByRole('button',{name:'Limpiar filtros'}).first().click();await expect(page.locator('tbody tr')).toHaveCount(8);
 });
 test('JSON backup roundtrip preserves edits and importing can be cancelled',async({page})=>{
  await page.getByRole('button',{name:'Abrir Q-10300'}).click();await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Proyecto',{exact:true}).fill('Proyecto respaldado');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();await expect(page.getByText('Cambios guardados',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Cerrar detalle'}).click();await page.getByRole('button',{name:'Configuración',exact:true}).click();
