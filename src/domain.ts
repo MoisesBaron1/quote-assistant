@@ -1,8 +1,45 @@
 export type Workflow = 'Pendiente'|'En curso'|'En revisión'|'Lista para enviar'|'Entregada';
 export type Priority = 'Normal'|'Alta'|'Crítica';
-export const quoteTypes=['Cotización de adicional','Retail menor','Retail mayor','Proyecto menor','Proyecto mayor'] as const;
+export const quoteTypes=['Cotización de adicional','Retail menor','Retail mayor','Proyecto menor','Proyecto mayor','Recotización proyecto','Recotización retail'] as const;
 export type QuoteType = typeof quoteTypes[number];
 export type LeadDays = Record<QuoteType,number|null>;
+export const effortRows=[
+  {key:'additional',type:'Cotización de adicional',takeoff:null,label:'Cotización de adicional',minutes:21},
+  {key:'projectMajorTakeoff',type:'Proyecto mayor',takeoff:true,label:'Proyecto mayor · Con takeoff',minutes:240},
+  {key:'projectMajor',type:'Proyecto mayor',takeoff:false,label:'Proyecto mayor · Sin takeoff',minutes:360},
+  {key:'projectMinorTakeoff',type:'Proyecto menor',takeoff:true,label:'Proyecto menor · Con takeoff',minutes:210},
+  {key:'projectMinor',type:'Proyecto menor',takeoff:false,label:'Proyecto menor · Sin takeoff',minutes:270},
+  {key:'requoteProject',type:'Recotización proyecto',takeoff:null,label:'Recotización proyecto',minutes:120},
+  {key:'requoteRetail',type:'Recotización retail',takeoff:null,label:'Recotización retail',minutes:60},
+  {key:'retailMajor',type:'Retail mayor',takeoff:null,label:'Retail mayor',minutes:180},
+  {key:'retailMinor',type:'Retail menor',takeoff:null,label:'Retail menor',minutes:120},
+] as const;
+export type WorkStandards=Record<typeof effortRows[number]['key'],number>;
+export function normalizeWorkStandards(raw:unknown):WorkStandards {
+  if(raw!==undefined&&(!raw||typeof raw!=='object'||Array.isArray(raw)))throw new Error('Tiempos de trabajo inválidos');
+  const values=(raw||{}) as Record<string,unknown>;
+  if(Object.keys(values).some(key=>!effortRows.some(row=>row.key===key)))throw new Error('Tipo de tiempo desconocido');
+  return Object.fromEntries(effortRows.map(row=>{const value=values[row.key]??row.minutes;
+    if(values[row.key]===null||typeof value!=='number'||!Number.isInteger(value)||value<1||value>60e9)throw new Error('El tiempo debe ser un número entero positivo de minutos');
+    return [row.key,value];})) as WorkStandards;
+}
+export function standardMinutes(type:QuoteType|null|undefined,takeoff:boolean,rules:WorkStandards=normalizeWorkStandards(undefined)):number|null {
+  const row=effortRows.find(row=>row.type===type&&(row.takeoff===null||row.takeoff===takeoff));
+  return row?rules[row.key]:null;
+}
+export function workTimeInput(minutes:number):string {return `${String(Math.floor(minutes/60)).padStart(2,'0')}:${String(minutes%60).padStart(2,'0')}`;}
+export function parseWorkTime(value:string):number {
+  const match=value.trim().match(/^(\d{1,10}):([0-5]\d)(?::00)?$/);
+  if(!match)throw new Error('Usa HH:MM, por ejemplo 00:21 o 03:30');
+  const minutes=Number(match[1])*60+Number(match[2]);
+  if(minutes<1||minutes>60e9)throw new Error('Introduce un tiempo mayor que cero');
+  return minutes;
+}
+export function formatDuration(hours:number):string {
+  if(!Number.isFinite(hours)||hours<0)return '—';
+  const seconds=Math.round(hours*3600),h=Math.floor(seconds/3600),m=Math.floor(seconds%3600/60),s=seconds%60;
+  return [h?`${h} h`:'',m?`${m} min`:'',s?`${s} s`:''].filter(Boolean).join(' ')||'0 min';
+}
 export type DeadlineSnapshot = {mode:'manual'|'policy';baseDueDate:string;baseBusinessDays:number|null};
 export type HistoryEntry = {id:string;at:string;actor:string;text:string};
 export type Quote = {id:string;code:string;project:string;client:string;am:string;estimator:string;assignedDate:string;originalDueDate:string;dueDate:string;status:Workflow;priority:Priority;estimatedHours:number;remainingHours:number;value:number;comments:string;updatedAt:string;completedAt?:string;history:HistoryEntry[];quoteType?:QuoteType|null;takeoff?:boolean;deadline?:DeadlineSnapshot};
@@ -67,6 +104,11 @@ export function daysRemaining(due:string,today:string):number {
   return Math.round((Date.parse(due+'T00:00:00Z')-Date.parse(today+'T00:00:00Z'))/86400000);
 }
 export const isTerminal=(q:Quote)=>q.status==='Entregada'||q.status==='Lista para enviar';
+export function quoteProgress(q:Quote):number {
+  if(isTerminal(q))return 100;
+  if(q.estimatedHours<=0)return q.remainingHours<=0?100:0;
+  return Math.max(0,Math.min(100,Math.round((1-q.remainingHours/q.estimatedHours)*100)));
+}
 export function delivery(quote:Quote,today:string):Delivery {
   const terminal=isTerminal(quote), days=daysRemaining(quote.dueDate,today);
   const overdue=!terminal&&days<0,postponed=quote.dueDate!==quote.originalDueDate;
@@ -77,8 +119,11 @@ export function risk(quote:Quote,today:string,capacity:number,alertDays:number):
   if(isTerminal(quote))return {level:'Bajo',reason:'Trabajo finalizado'};
   const days=daysRemaining(quote.dueDate,today);
   if(days<0)return {level:'Alto',reason:`El compromiso venció hace ${Math.abs(days)} ${Math.abs(days)===1?'día':'días'}`};
-  const available=Math.max(1,days+1)*capacity/5;
-  if(quote.remainingHours>available)return {level:'Alto',reason:`${quote.remainingHours} h pendientes superan las ${Math.round(available)} h nominales disponibles hasta la entrega`};
+  const span=days+1,weekday=new Date(today+'T00:00:00Z').getUTCDay();
+  let weekdays=Math.floor(span/7)*5;
+  for(let i=0;i<span%7;i++)if((weekday+i)%7!==0&&(weekday+i)%7!==6)weekdays++;
+  const available=weekdays*capacity/5;
+  if(quote.remainingHours>available)return {level:'Alto',reason:`${formatDuration(quote.remainingHours)} pendientes superan las ${formatDuration(available)} nominales disponibles de lunes a viernes hasta la entrega`};
   if(days<=alertDays||quote.remainingHours>available*.7)return {level:'Medio',reason:days===0?'La entrega vence hoy':`Entrega en ${days} ${days===1?'día':'días'}; conviene revisar el avance`};
   return {level:'Bajo',reason:'Plazo suficiente para las horas pendientes declaradas'};
 }
@@ -152,6 +197,8 @@ export function updateQuote(quote:Quote,patch:Partial<Quote>,actor:string,at:str
   if(patch.takeoff!==undefined&&!!patch.takeoff!==!!quote.takeoff)changes.push(`Takeoff: ${patch.takeoff?'incluido (+1 día hábil)':'sin takeoff'}`);
   if(patch.deadline&&!sameDeadline(patch.deadline,normalizeQuote(quote).deadline))changes.push(`Cálculo: ${patch.deadline.mode==='policy'?patch.deadline.baseBusinessDays+' días hábiles':'fecha base manual'} · base ${patch.deadline.baseDueDate}`);
   if(patch.comments!==undefined&&patch.comments!==quote.comments)changes.push('Comentarios actualizados');
+  if(patch.estimatedHours!==undefined&&patch.estimatedHours!==quote.estimatedHours)changes.push(`Tiempo estimado: ${formatDuration(quote.estimatedHours)} → ${formatDuration(patch.estimatedHours)}`);
+  if(patch.remainingHours!==undefined&&patch.remainingHours!==quote.remainingHours)changes.push(`Tiempo pendiente: ${formatDuration(quote.remainingHours)} → ${formatDuration(patch.remainingHours)}`);
   const result={...quote,...patch,id:quote.id,originalDueDate:quote.originalDueDate,updatedAt:at};
   if(isTerminal(result))result.completedAt=quote.completedAt||at;else delete result.completedAt;
   result.history=[{id:crypto.randomUUID(),at,actor,text:changes.join(' · ')||'Datos de la cotización actualizados'},...quote.history].slice(0,500);

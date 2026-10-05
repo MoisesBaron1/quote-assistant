@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-import {businessDate,normalizeLeadDays,parseBackup} from './domain';
+import {businessDate,normalizeLeadDays,normalizeWorkStandards,parseBackup} from './domain';
 import {createDemo,initialPeople} from './data';
 import type {Workspace} from './data';
 // Retain the legacy namespace to preserve saved quotations and cross-tab locking after rebranding.
@@ -8,7 +8,7 @@ export function restoreWorkspace(raw:string):Workspace {
   const data=JSON.parse(raw),checked=parseBackup(raw,initialPeople);
   const timezone=typeof data.settings?.timezone==='string'?data.settings.timezone:'UTC';
   businessDate(new Date(),timezone);
-  return {version:1,...checked,settings:{timezone,alertDays:[1,2,3,5,7].includes(data.settings?.alertDays)?data.settings.alertDays:2,desktopAlerts:data.settings?.desktopAlerts===true,leadDays:normalizeLeadDays(data.settings?.leadDays)},dismissed:Array.isArray(data.dismissed)?data.dismissed.filter((x:unknown)=>typeof x==='string').slice(-1000):[],events:Array.isArray(data.events)?data.events.filter((e:Record<string,unknown>)=>e&&typeof e.id==='string'&&typeof e.text==='string'&&typeof e.actor==='string'&&typeof e.at==='string'&&Number.isFinite(Date.parse(e.at))).slice(0,500):[],savedAt:typeof data.savedAt==='string'&&Number.isFinite(Date.parse(data.savedAt))?data.savedAt:new Date().toISOString()};
+  return {version:1,...checked,settings:{timezone,alertDays:[1,2,3,5,7].includes(data.settings?.alertDays)?data.settings.alertDays:2,desktopAlerts:data.settings?.desktopAlerts===true,leadDays:normalizeLeadDays(data.settings?.leadDays),workMinutes:normalizeWorkStandards(data.settings?.workMinutes)},dismissed:Array.isArray(data.dismissed)?data.dismissed.filter((x:unknown)=>typeof x==='string').slice(-1000):[],events:Array.isArray(data.events)?data.events.filter((e:Record<string,unknown>)=>e&&typeof e.id==='string'&&typeof e.text==='string'&&typeof e.actor==='string'&&typeof e.at==='string'&&Number.isFinite(Date.parse(e.at))).slice(0,500):[],savedAt:typeof data.savedAt==='string'&&Number.isFinite(Date.parse(data.savedAt))?data.savedAt:new Date().toISOString()};
 }
 export function useWorkspace() {
   const [initial]=useState(()=>{

@@ -16,8 +16,8 @@ test('business deadlines skip weekends, include leap days and exclude assignment
   assert.throws(()=>domain.addBusinessDays('2026-02-30',1));
   assert.throws(()=>domain.addBusinessDays('2026-10-02',1.5));
 });
-test('all five types accept exactly one extra business day for takeoff',()=>{
-  assert.equal(domain.quoteTypes?.length,5);
+test('all quotation types accept exactly one extra business day for takeoff',()=>{
+  assert.equal(domain.quoteTypes?.length,7);
   for(const type of domain.quoteTypes){
     const q=domain.normalizeQuote({...oldQuote(),quoteType:type,takeoff:true,deadline:{mode:'policy',baseBusinessDays:1,baseDueDate:'2026-10-05'},dueDate:'2026-10-06'});
     assert.deepEqual(domain.validateAssignment(q,people),{});
@@ -29,7 +29,7 @@ test('all five types accept exactly one extra business day for takeoff',()=>{
 test('missing lead times stay unset and invalid configured values are rejected',()=>{
   assert.equal(typeof domain.normalizeLeadDays,'function');
   const days=domain.normalizeLeadDays(undefined);
-  assert.equal(Object.values(days).length,5);
+  assert.equal(Object.values(days).length,7);
   assert.ok(Object.values(days).every(d=>d===null));
   for(const value of [0,366,1.5,'3',-1])assert.throws(()=>domain.normalizeLeadDays({[domain.quoteTypes[0]]:value}));
   assert.equal(domain.normalizeLeadDays({[domain.quoteTypes[0]]:365})[domain.quoteTypes[0]],365);

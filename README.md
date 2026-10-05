@@ -14,7 +14,7 @@ Activa el icono **Guía de presentación** en la barra superior para recorrer lo
 
 Incluye creación/edición/borrado, siete filtros de la épica, avisos internos, capacidad configurable, actividad, borrador copiable para clientes y respaldo/importación JSON validada.
 
-Las cotizaciones incorporan cinco tipos e «Incluye takeoff», que añade un día hábil. En Configuración, la vista Senior Estimator establece el plazo base de cada tipo (1–365 días hábiles); si falta, se pide una fecha base manual. Cada cotización conserva el cálculo utilizado y solo cambia con una edición explícita o «Recalcular con la regla vigente». Los plazos cuentan lunes a viernes, sin festivos, desde el día siguiente a la asignación.
+Las cotizaciones incorporan siete tipos, incluidas las recotizaciones de proyecto y retail, y la opción «Incluye takeoff», que añade un día hábil. En Configuración, la vista Senior Estimator establece el plazo base de cada tipo (1–365 días hábiles); si falta, se pide una fecha base manual. Cada cotización conserva el cálculo utilizado y solo cambia con una edición explícita o «Recalcular con la regla vigente». Los plazos cuentan lunes a viernes, sin festivos, desde el día siguiente a la asignación.
 
 Cotizaciones abre con tarjetas amplias y permite volver a Tabla. Ambas vistas comparten búsqueda, orden, paginación y filtros por tipo y takeoff. Los datos anteriores quedan «Sin clasificar» con sus fechas intactas; se exige clasificarlos al reasignar y la redistribución automática los omite hasta entonces.
 
@@ -64,4 +64,12 @@ Las vistas mantienen una URL con hash y admiten recarga/atrás. Los indicadores 
 
 Recorrido de cinco minutos: [guía de presentación](docs/guia-presentacion.md).
 
-Verificación de esta extensión: 27 pruebas de dominio y 36 escenarios de navegador, compilación correcta, revisión visual independiente y comprobación pública de formularios, recálculo, persistencia/offline, filtros, CSV, móvil y descargas. Detalle en [docs/quote-types-verification.md](docs/quote-types-verification.md).
+Verificación de la extensión de tipos del 3 de octubre: 27 pruebas de dominio y 36 escenarios de navegador, compilación correcta, revisión visual independiente y comprobación pública de formularios, recálculo, persistencia/offline, filtros, CSV, móvil y descargas. Detalle en [docs/quote-types-verification.md](docs/quote-types-verification.md).
+
+## Tiempos de trabajo y QA — 2026-10-05
+
+Los estándares recibidos se integran como minutos de esfuerzo, separados de los días hábiles de entrega. El adicional es 00:21; proyectos mayor con/sin takeoff 04:00/06:00 y menor 03:30/04:30; recotización proyecto 02:00, recotización retail 01:00, retail mayor 03:00 y retail menor 02:00. Senior puede cambiarlos en Configuración. Las cotizaciones existentes conservan sus horas; Aplicar tiempo estándar ajusta solo la estimación en una edición, conservando el pendiente. Ver [plan y matriz QA](docs/work-times-qa-plan.md).
+
+Verificación de esta entrega: 35 pruebas de dominio y 48 escenarios de navegador aprobados, compilación correcta, ocho capturas sin desbordamientos ni violaciones WCAG automatizadas y revisión independiente cerrada. Las regresiones cubren campos vacíos, borradores y guardados demorados, progreso de 21 minutos, capacidad de días hábiles, reglas, compatibilidad y offline. Detalle en [informe QA](docs/work-times-qa-verification.md).
+
+Publicación de estos tiempos comprobada el 5 de octubre en el mismo enlace: nueve estándares, reglas y compromisos, borradores y guardados demorados, edición offline, móvil y las cinco descargas. El proyecto continúa en Hobby con archivos estáticos.

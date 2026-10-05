@@ -8,6 +8,8 @@ No se subieron archivos a Google Drive. Las copias de trabajo de esta sesión es
 
 Para regenerar la entrega, mantén el MP4 y el SRT en una carpeta y ejecuta `npm run prepare:downloads -- /ruta/a/los/materiales`. El script copia esos activos, transforma `docs/guia-presentacion.md` en PDF y texto, y genera la página para teléfonos. Requiere Chromium; usa `QUOTE_ASSISTANT_BROWSER_PATH` para seleccionar otro ejecutable. El build del MVP no precarga estos materiales en la caché offline: la descarga se inicia al pulsar el enlace.
 
+La compilación también genera copias en `dist/descargas` y `.vercel/output/static/descargas`. El paquete estático de publicación de esta sesión está en `/workspace/quote-assistant-release/.vercel/output/static/descargas`. Son copias de trabajo que pueden regenerarse; inclúyelas si necesitas eliminar todos los archivos del entorno.
+
 Para retirar las descargas de la dirección pública, elimina los materiales de `public/descargas`, retira sus reglas de descarga en `vercel.json` y vuelve a desplegar. Para eliminar todas las copias alojadas, revisa y elimina también los despliegues anteriores que contengan estos archivos. Para borrar todas las copias de trabajo, elimina los archivos correspondientes de `shared/downloads`, los archivos duplicados en `public/descargas` y el MP4 en `videos/quote-assistant-video/renders`, conservando o eliminando el proyecto editable según se solicite. Borrar una copia local del teléfono no modifica esos originales ni los despliegues.
 
 Se conserva Vercel Hobby, con sus límites y condiciones; no se añadieron servicios o planes de pago.
