@@ -1,6 +1,6 @@
 # Quote Assistant · Live Quotation Tracking
 
-MVP de demostración en español construido a partir de la épica adjunta y ampliado por autorización del usuario. React, TypeScript y Vite; tipografía alojada con el sitio.
+MVP local en español construido a partir de la épica adjunta y ampliado por autorización del usuario. React, TypeScript y Vite; tipografía alojada con el sitio. Trabajo empieza vacío y Ejemplos conserva la demostración en un almacén separado.
 
 ## Presentación
 
@@ -9,7 +9,7 @@ Activa el icono **Guía de presentación** en la barra superior para recorrer lo
 1. Abre Resumen: indicadores de entrega, capacidad y cotizaciones críticas.
 2. Abre una cotización: responsables, fechas original/vigente, comentarios e historial.
 3. En Equipo, usa Equilibrar carga para revisar y aplicar una propuesta.
-4. Consulta Calendario y Alertas; cambia Vista demo para explorar perfiles.
+4. Consulta Calendario y Alertas; cambia Perfil actual para explorar los recorridos del equipo real.
 5. Abre Resumen ejecutivo para imprimir o exportar CSV.
 
 Incluye creación/edición/borrado, siete filtros de la épica, avisos internos, capacidad configurable, actividad, borrador copiable para clientes y respaldo/importación JSON validada.
@@ -18,9 +18,9 @@ Las cotizaciones incorporan siete tipos, incluidas las recotizaciones de proyect
 
 Cotizaciones abre con tarjetas amplias y permite volver a Tabla. Ambas vistas comparten búsqueda, orden, paginación y filtros por tipo y takeoff. Los datos anteriores quedan «Sin clasificar» con sus fechas intactas; se exige clasificarlos al reasignar y la redistribución automática los omite hasta entonces.
 
-## Alcance real de la demo
+## Alcance real del MVP
 
-Los ejemplos son ficticios. Los datos se guardan en localStorage por navegador y origen; las pestañas del mismo navegador se actualizan mediante eventos de almacenamiento. No existe servidor de datos, autenticación ni colaboración entre dispositivos. Las vistas de rol son simulaciones y no controles de acceso. El mensaje al cliente se prepara y copia; no se envía. Los avisos opcionales dependen del permiso del navegador y de que la app esté abierta.
+Los proyectos de Ejemplos son ficticios; las personas son el equipo facilitado por el usuario. Los datos se guardan en localStorage por navegador, origen y espacio; las pestañas del mismo espacio se actualizan mediante eventos de almacenamiento. No existe servidor de datos, autenticación ni colaboración entre dispositivos. Los perfiles ofrecen recorridos funcionales con controles de rol, pero son seleccionables sin contraseña y no verifican la identidad. El mensaje al cliente se prepara y copia; no se envía. Los avisos opcionales dependen del permiso del navegador y de que la app esté abierta.
 
 Las mutaciones se serializan con Web Locks en navegadores compatibles. Se revisa la versión persistida antes de escribir; se bloquean formularios y confirmaciones desactualizados. Si falla el almacenamiento, la app conserva cambios en memoria, muestra una advertencia y permite respaldarlos. No constituye una base transaccional para producción.
 
@@ -48,7 +48,7 @@ La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajust
 
 `vercel.json` configura Vite y cabeceras. La demo es estática; no necesita claves ni variables de entorno. Para uso permanente, vincula tu cuenta de Vercel y ejecuta `vercel --prod`. La CLI también ofrece `vercel deploy --temporary` sin inicio de sesión; la URL y las condiciones reales de ese despliegue se registran en `progress.md`.
 
-Para operar con datos reales: añadir identidad y permisos en servidor, almacenamiento autoritativo, auditoría protegida y sincronización entre usuarios; conectar la fuente de cotizaciones y aprobar las reglas de trabajo. Estas capacidades no están presentes en la demo.
+Para operar de forma compartida desde distintos dispositivos: añadir identidad y permisos en servidor, almacenamiento autoritativo, auditoría protegida y sincronización entre usuarios. Estas capacidades no están conectadas en este MVP local.
 
 Actualización publicada y verificada: https://quote-assistant-moi.vercel.app, proyecto `quote-assistant-moi` del equipo `moi`. Despliegue de producción en el plan gratuito Hobby de Vercel, con build local y solo archivos estáticos. No se contrataron servicios adicionales; aplican los límites y condiciones de Hobby. El usuario autorizó el nuevo enlace porque la cuenta conectada no tiene acceso al equipo del proyecto anterior.
 
@@ -73,3 +73,17 @@ Los estándares recibidos se integran como minutos de esfuerzo, separados de los
 Verificación de esta entrega: 35 pruebas de dominio y 48 escenarios de navegador aprobados, compilación correcta, ocho capturas sin desbordamientos ni violaciones WCAG automatizadas y revisión independiente cerrada. Las regresiones cubren campos vacíos, borradores y guardados demorados, progreso de 21 minutos, capacidad de días hábiles, reglas, compatibilidad y offline. Detalle en [informe QA](docs/work-times-qa-verification.md).
 
 Publicación de estos tiempos comprobada el 5 de octubre en el mismo enlace: nueve estándares, reglas y compromisos, borradores y guardados demorados, edición offline, móvil y las cinco descargas. El proyecto continúa en Hobby con archivos estáticos.
+
+## Equipo real y perfiles locales — 2026-10-06
+
+Senior: **Kevin Amaya**. Estimators: **Danilo Heredia, Moisés Barón y Daniela Torres**. Account Managers: **Nayib Farah, Carlos Obregón, Anthony Coronell, Andrés Gianneo, Andrés Franco, Carlos Sierra y Eduardo Jiménez**.
+
+Kevin crea, asigna, reasigna y administra reglas y capacidad. Los Estimators actualizan solo el estado, las horas y los comentarios de sus propias cotizaciones; en el teléfono, estos campos aparecen antes de los datos de asignación de consulta. Cada Account Manager sigue sus solicitudes, prepara mensajes y consulta reportes. Perfil actual conserva la selección por pestaña, actualiza la identidad y usa el nombre real en el historial. Las revisiones de alertas son propias del perfil; sus exportaciones contienen solo las cotizaciones visibles.
+
+Los visitantes nuevos abren **Trabajo**, inicialmente vacío. **Ejemplos** contiene cotizaciones ficticias separadas. Cambiar de espacio protege la configuración pendiente, que Kevin puede guardar o descartar. Restaurar ejemplos no reemplaza Trabajo. Las pestañas comparten únicamente el almacén del mismo espacio en este navegador.
+
+La migración reemplaza responsables solo en ejemplos antiguos reconocibles sin edición. Conserva registros modificados y sus responsables anteriores, junto con fechas, horas e historial. Kevin puede revisarlos en Equipo y asignarlos al equipo actual. Danilo, Moisés y Daniela forman la capacidad actual y la redistribución; la referencia inicial es 40 h/semana, configurable.
+
+**Los perfiles locales no son cuentas autenticadas y no sincronizan entre dispositivos.** El alcance del MVP sigue siendo gratuito, sin backend conectado. La guía describe esta condición y los recorridos de cada función. Plan: [perfiles del equipo](docs/team-profiles-plan.md).
+
+Verificación de perfiles: **45 pruebas de dominio y 64 escenarios de navegador aprobados**, compilación correcta, ocho superficies verificadas y revisión independiente de las dos correcciones cerrada. Publicado el 6 de octubre en el enlace actual de Vercel Hobby, con comprobación anónima de la app, las cinco descargas y los recorridos de perfiles/persistencia/offline. Detalle: [informe QA de perfiles](docs/team-profiles-verification.md) y [handoff visual](docs/team-profiles-design-handoff.md).

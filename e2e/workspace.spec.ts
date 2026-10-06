@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures';
 test.beforeEach(async({page})=>{await page.goto('/');await page.evaluate(()=>localStorage.clear());await page.reload();});
 test('all epic data is visible and combined filters can be cleared',async({page})=>{
   await expect(page.getByRole('heading',{name:'Cotizaciones, bajo control.'})).toBeVisible();
@@ -37,11 +37,11 @@ test('team rebalancing applies and records changes',async({page})=>{
   await expect(page.getByText('Carga redistribuida')).toBeVisible();
 });
 test('role views change consultation scope and expose no editing action for account managers',async({page})=>{
-  await page.getByLabel('Vista de rol').selectOption('account');
+  await page.getByLabel('Perfil actual').selectOption('account-carlos-obregon');
   await expect(page.getByRole('button',{name:'Nueva cotización'})).toHaveCount(0);
-  await page.getByLabel('Usuario de la vista').selectOption('Daniel López');
+
   await page.getByRole('button',{name:'Cotizaciones',exact:true}).click();
-  await page.getByRole('button',{name:'Tabla',exact:true}).click();await expect(page.locator('tbody tr')).toHaveCount(8);
+  await page.getByRole('button',{name:'Tabla',exact:true}).click();const count=await page.evaluate(()=>JSON.parse(localStorage.getItem('epica-workspace-v1')!).quotes.filter((q:any)=>q.am==='Carlos Obregón').length);await expect(page.locator('tbody tr')).toHaveCount(count);
 });
 test('calendar, alerts, settings, export and executive report are usable',async({page})=>{
   await page.getByRole('button',{name:'Calendario',exact:true}).click();

@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures';
 test.beforeEach(async({page})=>{await page.goto('/');await page.evaluate(()=>localStorage.clear());await page.goto('/');await page.reload();});
 test('Escape preserves an unsaved quotation until the user chooses to discard',async({page})=>{
  await page.getByRole('button',{name:'Abrir Q-10300'}).click();await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Proyecto',{exact:true}).fill('Conservar mi borrador');await page.keyboard.press('Escape');

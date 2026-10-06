@@ -43,7 +43,7 @@ export function formatDuration(hours:number):string {
 export type DeadlineSnapshot = {mode:'manual'|'policy';baseDueDate:string;baseBusinessDays:number|null};
 export type HistoryEntry = {id:string;at:string;actor:string;text:string};
 export type Quote = {id:string;code:string;project:string;client:string;am:string;estimator:string;assignedDate:string;originalDueDate:string;dueDate:string;status:Workflow;priority:Priority;estimatedHours:number;remainingHours:number;value:number;comments:string;updatedAt:string;completedAt?:string;history:HistoryEntry[];quoteType?:QuoteType|null;takeoff?:boolean;deadline?:DeadlineSnapshot};
-export type Person = {id:string;name:string;initials:string;color:string;capacity:number};
+export type Person = {id:string;name:string;initials:string;color:string;capacity:number;archived?:boolean};
 export type Filters = {search?:string;estimator?:string;am?:string;status?:string;delivery?:string;dueFrom?:string;dueTo?:string;overdue?:boolean;postponed?:boolean;quoteType?:QuoteType|'unclassified'|'';takeoff?:'with'|'without'|''};
 export type Delivery = {label:string;overdue:boolean;postponed:boolean;terminal:boolean;days:number};
 export type Load = Person & {hours:number;count:number;percent:number};
@@ -181,6 +181,7 @@ export function validateQuote(quote:Quote,people:Person[]):Record<string,string>
 }
 export function validateAssignment(quote:Quote,people:Person[],previous?:Quote):Record<string,string> {
   const errors=validateQuote(quote,people);
+  if(people.find(p=>p.id===quote.estimator)?.archived&&(!previous||previous.estimator!==quote.estimator))errors.estimator='Selecciona un Estimator del equipo actual';
   if((!previous||previous.estimator!==quote.estimator)&&!quote.quoteType)errors.quoteType='Selecciona el tipo antes de asignar la cotización';
   const current=normalizeQuote(quote),before=previous?normalizeQuote(previous):undefined;
   const replanned=!before||current.assignedDate!==before.assignedDate||current.takeoff!==before.takeoff||!sameDeadline(current.deadline,before.deadline);
@@ -215,7 +216,7 @@ export function parseBackup(text:string,existingPeople:Person[]):{quotes:Quote[]
   if(!data||typeof data!=='object'||!Array.isArray(data.quotes)||data.quotes.length>5000)throw new Error('Formato inválido: se requiere una lista de cotizaciones');
   if(data.version!==undefined&&data.version!==1)throw new Error('Versión de respaldo no compatible');
   const people=(data.people||existingPeople) as Person[];
-  if(!Array.isArray(people)||!people.length||people.length>50||people.some(p=>!p||typeof p.id!=='string'||!p.id.trim()||typeof p.name!=='string'||!p.name.trim()||typeof p.initials!=='string'||typeof p.color!=='string'||!/^#[0-9a-f]{6}$/i.test(p.color)||!Number.isFinite(p.capacity)||p.capacity<1||p.capacity>168)||new Set(people.map(p=>p.id)).size!==people.length)throw new Error('Equipo inválido');
+  if(!Array.isArray(people)||!people.length||people.length>53||people.some(p=>!p||typeof p.id!=='string'||!p.id.trim()||typeof p.name!=='string'||!p.name.trim()||typeof p.initials!=='string'||typeof p.color!=='string'||!/^#[0-9a-f]{6}$/i.test(p.color)||!Number.isFinite(p.capacity)||p.capacity<1||p.capacity>168||(p.archived!==undefined&&typeof p.archived!=='boolean'))||new Set(people.map(p=>p.id)).size!==people.length)throw new Error('Equipo inválido');
   const ids=new Set<string>(),codes=new Set<string>();
   const quotes=data.quotes as Quote[];
   for(const q of quotes){if(Object.keys(validateQuote(q,people)).length)throw new Error('Cotización inválida: revisa los campos requeridos');const code=q.code.trim().toUpperCase();if(ids.has(q.id)||codes.has(code))throw new Error('Cotizaciones duplicadas en el archivo');ids.add(q.id);codes.add(code);}

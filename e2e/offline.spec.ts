@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures';
 test.use({baseURL:'http://127.0.0.1:4173',serviceWorkers:'allow'});
 test('after the first online visit, offline reload and every demo view work',async({page,context})=>{
  await page.goto('/');await page.waitForFunction(()=>!!navigator.serviceWorker.controller,undefined,{timeout:8000});
@@ -9,4 +9,10 @@ test('after the first online visit, offline reload and every demo view work',asy
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('epica-workspace-v1')!).quotes.find((q:{code:string})=>q.code==='Q-10300').project)).toBe('Edición sin internet');
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('epica-workspace-v1')!).settings.leadDays['Retail menor'])).toBe(2);
  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('epica-workspace-v1')!).settings.workMinutes.additional)).toBe(25);
+});
+
+test('real work, chosen profile and estimator updates survive an offline reload',async({page,context})=>{
+ await page.goto('/?space=work');await page.waitForFunction(()=>!!navigator.serviceWorker.controller,undefined,{timeout:8000});await page.getByRole('button',{name:'Nueva cotización'}).click();await page.getByLabel('Proyecto',{exact:true}).fill('Cotización offline real');await page.getByLabel('Cliente',{exact:true}).fill('Cliente offline');await page.getByLabel('Estimator',{exact:true}).selectOption('daniela');await page.getByLabel('Tipo de cotización',{exact:true}).selectOption('Retail menor');
+ const assigned=await page.getByLabel('Fecha de asignación',{exact:true}).inputValue();const next=new Date(assigned+'T12:00:00Z');next.setUTCDate(next.getUTCDate()+1);while([0,6].includes(next.getUTCDay()))next.setUTCDate(next.getUTCDate()+1);await page.getByLabel('Fecha base manual',{exact:true}).fill(next.toISOString().slice(0,10));await page.getByRole('button',{name:'Crear cotización',exact:true}).click();await expect(page.getByText('Cotización creada',{exact:true})).toBeVisible();await page.getByLabel('Perfil actual').selectOption('estimator-daniela');
+ await context.setOffline(true);await page.reload();await expect(page.getByLabel('Espacio de trabajo')).toHaveValue('work');await expect(page.getByLabel('Perfil actual')).toHaveValue('estimator-daniela');await page.getByRole('button',{name:'Abrir Q-10300'}).click();await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Horas pendientes',{exact:true}).fill('0.5');await page.getByLabel('Comentarios',{exact:true}).fill('Avance guardado offline');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();await expect(page.getByText('Cambios guardados',{exact:true})).toBeVisible();await page.reload();expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('quote-assistant-workspace-v1')!).quotes[0].remainingHours)).toBe(0.5);await expect(page.locator('.quote-card')).toContainText('30 min');
 });

@@ -1,4 +1,4 @@
-import {test,expect} from '@playwright/test';
+import {test,expect} from './fixtures';
 
 test.beforeEach(async({page})=>{await page.clock.install({time:new Date('2026-10-02T15:00:00Z')});await page.goto('/');await page.evaluate(()=>localStorage.clear());await page.reload();});
 async function createManual(page:any,takeoff=true){
@@ -41,12 +41,12 @@ test('cards and table share sorting, filters and persisted view preference',asyn
 test('legacy workspace keeps dates and requires classification before manual reassignment',async({page})=>{
   await page.evaluate(()=>{const key='epica-workspace-v1',data=JSON.parse(localStorage.getItem(key)!);data.quotes.forEach((q:any)=>{delete q.quoteType;delete q.takeoff;delete q.deadline;});delete data.settings.leadDays;data.quotes[0].dueDate='2026-10-10';data.quotes[0].originalDueDate='2026-10-10';localStorage.setItem(key,JSON.stringify(data));});await page.reload();await page.getByRole('searchbox',{name:'Buscar cotizaciones'}).fill('Q-10300');
   await page.getByRole('button',{name:'Abrir Q-10300'}).click();await expect(page.getByRole('dialog')).toContainText('Sin clasificar');await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Comentarios',{exact:true}).fill('Conservar sábado');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();await expect(page.getByText('Cambios guardados',{exact:true})).toBeVisible();
-  await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Estimator',{exact:true}).selectOption('mateo');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();await expect(page.getByText('Selecciona el tipo antes de asignar la cotización')).toBeVisible();await page.getByLabel('Tipo de cotización',{exact:true}).selectOption('Proyecto menor');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();
+  await page.getByRole('button',{name:'Editar cotización'}).click();await page.getByLabel('Estimator',{exact:true}).selectOption('moises');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();await expect(page.getByText('Selecciona el tipo antes de asignar la cotización')).toBeVisible();await page.getByLabel('Tipo de cotización',{exact:true}).selectOption('Proyecto menor');await page.getByRole('button',{name:'Guardar cambios',exact:true}).click();
   await expect(page.getByRole('dialog').getByText('Fecha de entrega',{exact:true}).locator('..')).toContainText('10 de octubre');
 });
 test('policy settings are read only outside senior role and invalid values do not save',async({page})=>{
   await page.getByRole('button',{name:'Configuración',exact:true}).click();await page.getByLabel('Plazo base de Retail mayor').fill('0');await page.getByRole('button',{name:'Guardar configuración'}).click();await expect(page.getByText('Introduce un entero de 1 a 365, o deja el plazo vacío')).toBeVisible();
-  await page.getByLabel('Vista de rol').selectOption('estimator');await expect(page.getByLabel('Plazo base de Retail mayor')).toBeDisabled();await expect(page.getByRole('button',{name:'Guardar configuración'})).toBeDisabled();
+  await page.getByLabel('Perfil actual').selectOption('estimator-danilo');await expect(page.getByLabel('Plazo base de Retail mayor')).toBeDisabled();await expect(page.getByRole('button',{name:'Guardar configuración'})).toBeDisabled();
 });
 test('new manual weekend dates are blocked while weekdays work',async({page})=>{
   await createManual(page);await page.getByLabel('Fecha base manual',{exact:true}).fill('2026-10-10');await page.getByRole('button',{name:'Crear cotización',exact:true}).click();await expect(page.getByText('Selecciona una fecha base de lunes a viernes')).toBeVisible();
