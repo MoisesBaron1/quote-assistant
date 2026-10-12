@@ -45,6 +45,6 @@
 
 - [x] Copiar composición, activos, scripts y licencias del video; excluir dependencias, modelos y renders redundantes.
 - [x] Validar sintaxis, referencias a activos y ausencia de credenciales en el árbol/historial.
-- [ ] Commit y publicación en el repositorio proporcionado por el usuario, conservando todos los commits anteriores.
-- [ ] Verificar SHA, privacidad, archivos, release y resultado de GitHub Actions.
-- [ ] Entregar enlace del repositorio, instrucciones Claude y evidencias.
+- [x] Commit y publicación en el repositorio proporcionado por el usuario, conservando todos los commits anteriores.
+- [x] Verificar SHA, visibilidad pública elegida por el usuario, clon completo y resultado de GitHub Actions; paquete textual en el release de continuidad.
+- [x] Entregar enlace del repositorio, instrucciones Claude y evidencias.

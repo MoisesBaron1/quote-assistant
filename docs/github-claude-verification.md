@@ -46,4 +46,10 @@ Regresiones y configuración están dentro de Git. Informes anteriores: `docs/te
 
 Logs de esta sesión: `/tmp/quote-claude-clean-setup.log`, `/tmp/quote-claude-clean-e2e-final.log`, `/tmp/quote-claude-imports-final-green.log`, `/tmp/quote-claude-downloads.log`, `/tmp/quote-claude-video-capture-preview.log`. Son evidencia local; los comandos de arriba permiten reproducirla sin esos archivos.
 
-La publicación debe conservar la rama `main` y los ocho commits originales, verificar el SHA remoto y revisar el primer resultado de GitHub Actions. El paquete textual de contexto acompaña la entrega; `docs/continuar-en-claude.md` y `docs/claude-prompt.md` explican su uso. Credenciales y configuraciones locales de GitHub/Vercel no forman parte del repositorio ni de los paquetes.
+## Publicación confirmada
+
+Publicado en `main`: código y traspaso en el commit `b3f66f17a7ae31bd34bf0b0ed5992a8be5338016`. Se clonó desde GitHub a otro directorio: los 140 archivos coinciden byte a byte, los ocho commits anteriores están presentes y `bash scripts/setup-claude.sh` vuelve a instalar, aprobar las 45 pruebas de dominio y compilar correctamente. El cambio posterior a este commit actualiza únicamente documentación de cierre.
+
+GitHub Actions aprobó instalación, lógica, build, Chromium y la suite completa de navegador: [ejecución 38187381589](https://github.com/MoisesBaron1/quote-assistant/actions/runs/38187381589), resultado **success**, para el mismo commit de código. No se usaron secretos ni despliegue automático.
+
+El paquete textual de contexto acompaña el [release de continuidad](https://github.com/MoisesBaron1/quote-assistant/releases/tag/handoff-2026-10-11); `docs/continuar-en-claude.md` y `docs/claude-prompt.md` explican su uso. Credenciales y configuraciones locales de GitHub/Vercel no forman parte del repositorio ni de los paquetes.
