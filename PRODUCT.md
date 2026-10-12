@@ -23,7 +23,7 @@ Separate Trabajo (initially empty) and Ejemplos (clearly labeled synthetic quota
 Spanish daily operations on desktop and responsive mobile. Configurable business timezone, initially UTC; calendar-day remaining counters and alerts. New assignment lead times use Monday–Friday business days, excluding the assignment day and without a holiday calendar. Completed/delivered quotations do not become overdue. Original commitments survive date changes. Postponed overdue work is counted in both categories. Risk is heuristic, not statistical prediction.
 
 ## Evidence on Hand
-Uploaded epic and extracted requirements in /workspace/docs/superpowers. No supplied brand assets, customer data or measured performance claims.
+The uploaded epic's extracted requirements and original plans are preserved in `docs/superpowers/`, with historical labels. Current contracts and boundaries are documented here and in `CLAUDE.md`. No supplied brand assets, customer data or measured performance claims.
 
 ## Product Principles
 Computed delivery state; traceable commitments; actionable alerts; honestly labeled demonstration; working controls.

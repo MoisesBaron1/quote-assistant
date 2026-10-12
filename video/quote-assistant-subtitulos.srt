@@ -1,0 +1,219 @@
+1
+00:00:00,000 --> 00:00:02,500
+Cada cotización tiene un compromiso.
+
+2
+00:00:02,720 --> 00:00:05,520
+Quote Assistant te ayuda a verlo, darle seguimiento
+
+3
+00:00:05,520 --> 00:00:07,280
+y decidir qué hacer después.
+
+4
+00:00:08,140 --> 00:00:09,580
+Empieza en Resumen.
+
+5
+00:00:09,880 --> 00:00:12,780
+Los indicadores muestran el estado de las cotizaciones.
+
+6
+00:00:13,140 --> 00:00:15,660
+Más abajo, compara las horas pendientes con la
+
+7
+00:00:15,660 --> 00:00:16,780
+capacidad del equipo.
+
+8
+00:00:17,140 --> 00:00:20,020
+Así identificas dónde conviene enfocar tu atención.
+
+9
+00:00:20,960 --> 00:00:23,500
+Para actuar sobre un indicador, haz clic en
+
+10
+00:00:23,500 --> 00:00:24,320
+Retrasadas.
+
+11
+00:00:24,700 --> 00:00:26,740
+La lista se filtra automáticamente.
+
+12
+00:00:27,040 --> 00:00:30,540
+Puedes combinar responsables, fechas y estado, o pulsar
+
+13
+00:00:30,540 --> 00:00:32,900
+Limpiar filtros para volver a ver todas las
+
+14
+00:00:32,900 --> 00:00:33,740
+cotizaciones.
+
+15
+00:00:34,720 --> 00:00:37,920
+Para registrar una solicitud, pulsa Nueva cotización.
+
+16
+00:00:38,340 --> 00:00:41,280
+Completa el proyecto, el cliente, los responsables y
+
+17
+00:00:41,280 --> 00:00:42,440
+la fecha de entrega.
+
+18
+00:00:42,740 --> 00:00:45,660
+Los campos obligatorios se señalan antes de guardar.
+
+19
+00:00:46,640 --> 00:00:49,800
+Abre una cotización para ver sus responsables, avance
+
+20
+00:00:49,800 --> 00:00:51,160
+y compromiso original.
+
+21
+00:00:51,540 --> 00:00:54,060
+Usa Editar cotización y guarda los cambios.
+
+22
+00:00:54,260 --> 00:00:56,680
+En Historial puedes revisar las actualizaciones.
+
+23
+00:00:56,680 --> 00:00:58,240
+Si cierras un borrador,
+
+24
+00:00:58,520 --> 00:01:01,000
+la app pide confirmar antes de descartarlo.
+
+25
+00:01:01,520 --> 00:01:04,000
+En Equipo, pulsa Equilibrar carga.
+
+26
+00:01:04,360 --> 00:01:06,220
+Revisa la propuesta y el cambio de carga
+
+27
+00:01:06,220 --> 00:01:08,020
+estimado antes de aplicarla.
+
+28
+00:01:08,240 --> 00:01:09,760
+También puedes cancelar.
+
+29
+00:01:10,000 --> 00:01:12,820
+La recomendación usa horas y capacidad declaradas;
+
+30
+00:01:12,820 --> 00:01:15,160
+acompáñala con el criterio del equipo.
+
+31
+00:01:15,740 --> 00:01:19,380
+En Calendario, consulta las entregas por día, cambia
+
+32
+00:01:19,380 --> 00:01:21,040
+de semana y vuelve a Hoy.
+
+33
+00:01:21,440 --> 00:01:24,120
+Selecciona una cotización para abrir su detalle y
+
+34
+00:01:24,120 --> 00:01:25,580
+revisar el siguiente paso.
+
+35
+00:01:26,680 --> 00:01:29,580
+En Alertas, revisa la explicación de cada riesgo.
+
+36
+00:01:29,780 --> 00:01:32,460
+Puedes preparar un mensaje para el cliente, ajustarlo
+
+37
+00:01:32,460 --> 00:01:35,040
+y copiarlo. La demo genera un borrador;
+
+38
+00:01:35,300 --> 00:01:37,140
+el envío lo realizas tú por el canal
+
+39
+00:01:37,140 --> 00:01:38,120
+que prefieras.
+
+40
+00:01:39,080 --> 00:01:41,000
+Cierra con Resumen ejecutivo.
+
+41
+00:01:41,260 --> 00:01:43,820
+Muestra la distribución del trabajo y las prioridades
+
+42
+00:01:43,820 --> 00:01:44,720
+de seguimiento.
+
+43
+00:01:45,160 --> 00:01:48,130
+Usa Imprimir para guardar un PDF, o Exportar
+
+44
+00:01:48,130 --> 00:01:50,380
+CSV para trabajar con los datos de la
+
+45
+00:01:50,380 --> 00:01:51,040
+selección.
+
+46
+00:01:52,060 --> 00:01:55,620
+Antes de presentar, descarga un respaldo desde Configuración.
+
+47
+00:01:55,620 --> 00:01:58,320
+Abre la app con internet y espera a
+
+48
+00:01:58,320 --> 00:01:59,860
+ver Disponible sin conexión.
+
+49
+00:02:00,220 --> 00:02:02,940
+Después podrás recargar y seguir trabajando aunque se
+
+50
+00:02:02,940 --> 00:02:04,080
+corte la conexión.
+
+51
+00:02:05,140 --> 00:02:07,520
+Activa la Guía de presentación para recorrer los
+
+52
+00:02:07,520 --> 00:02:08,840
+módulos principales.
+
+53
+00:02:09,140 --> 00:02:11,900
+Esta versión usa datos de ejemplo, roles simulados
+
+54
+00:02:11,900 --> 00:02:13,940
+y guardado local en tu navegador.
+
+55
+00:02:14,320 --> 00:02:16,880
+Quote Assistant: cotizaciones, bajo control.

@@ -8,4 +8,9 @@ playwright-report/
 .impeccable/review/
 .superpowers/
 .vercel
-public/descargas/*.mp4
+video/renders/
+video/.hyperframes/
+video/snapshots/
+video/.venv/
+*.log
+.DS_Store

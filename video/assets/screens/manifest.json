@@ -1,0 +1,198 @@
+{
+  "capturedAt": "2026-10-01T12:42:43.116Z",
+  "http": 200,
+  "brand": "Quote Assistant",
+  "runtimeErrors": [],
+  "captures": [
+    {
+      "name": "overview.png",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "url": "https://quote-assistant-moises.vercel.app/"
+    },
+    {
+      "name": "metrics.png",
+      "clip": {
+        "x": 260,
+        "y": 274.6875,
+        "width": 1144,
+        "height": 121.890625
+      },
+      "url": "https://quote-assistant-moises.vercel.app/"
+    },
+    {
+      "name": "capacity.png",
+      "clip": {
+        "x": 261,
+        "y": 510.078125,
+        "width": 1142,
+        "height": 150
+      },
+      "url": "https://quote-assistant-moises.vercel.app/"
+    },
+    {
+      "name": "filtered.png",
+      "clip": {
+        "x": 260,
+        "y": 445.578125,
+        "width": 1144,
+        "height": 420.484375
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "filters.png",
+      "clip": {
+        "x": 260,
+        "y": 0,
+        "width": 1144,
+        "height": 620
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "new-quote.png",
+      "clip": {
+        "x": 865,
+        "y": 0,
+        "width": 575,
+        "height": 900
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "detail.png",
+      "clip": {
+        "x": 865,
+        "y": 0,
+        "width": 575,
+        "height": 560
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "edited.png",
+      "clip": {
+        "x": 865,
+        "y": 0,
+        "width": 575,
+        "height": 620
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "history.png",
+      "clip": {
+        "x": 865,
+        "y": 0,
+        "width": 575,
+        "height": 620
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#quotes"
+    },
+    {
+      "name": "team.png",
+      "clip": {
+        "x": 224,
+        "y": 0,
+        "width": 1216,
+        "height": 740
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#team"
+    },
+    {
+      "name": "rebalance.png",
+      "clip": {
+        "x": 390,
+        "y": 79.40625,
+        "width": 660,
+        "height": 740
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#team"
+    },
+    {
+      "name": "calendar.png",
+      "clip": {
+        "x": 224,
+        "y": 0,
+        "width": 1216,
+        "height": 720
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#calendar"
+    },
+    {
+      "name": "alerts.png",
+      "clip": {
+        "x": 224,
+        "y": 0,
+        "width": 1216,
+        "height": 660
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#alerts"
+    },
+    {
+      "name": "message.png",
+      "clip": {
+        "x": 865,
+        "y": 0,
+        "width": 575,
+        "height": 600
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#alerts"
+    },
+    {
+      "name": "report.png",
+      "clip": {
+        "x": 260,
+        "y": 0,
+        "width": 1144,
+        "height": 730
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#report"
+    },
+    {
+      "name": "settings.png",
+      "clip": {
+        "x": 260,
+        "y": 239.6875,
+        "width": 1144,
+        "height": 660.3125
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#settings"
+    },
+    {
+      "name": "offline-ready.png",
+      "clip": {
+        "x": 260,
+        "y": 838.1875,
+        "width": 1144,
+        "height": 61.8125
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#settings"
+    },
+    {
+      "name": "guide.png",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#overview"
+    },
+    {
+      "name": "mobile.png",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "url": "https://quote-assistant-moises.vercel.app/#overview"
+    }
+  ]
+}

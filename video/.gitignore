@@ -1,0 +1,8 @@
+.venv/
+node_modules/
+renders/
+.hyperframes/
+snapshots/
+*.log
+capture/AGENTS.md
+capture/CLAUDE.md

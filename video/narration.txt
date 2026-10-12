@@ -1,0 +1,21 @@
+Cada cotización tiene un compromiso. Cuout Asístent te ayuda a verlo, darle seguimiento y decidir qué hacer después.
+
+Empieza en Resumen. Los indicadores muestran el estado de las cotizaciones. Más abajo, compara las horas pendientes con la capacidad del equipo. Así identificas dónde conviene enfocar tu atención.
+
+Para actuar sobre un indicador, haz clic en Retrasadas. La lista se filtra automáticamente. Puedes combinar responsables, fechas y estado, o pulsar Limpiar filtros para volver a ver todas las cotizaciones.
+
+Para registrar una solicitud, pulsa Nueva cotización. Completa el proyecto, el cliente, los responsables y la fecha de entrega. Los campos obligatorios se señalan antes de guardar.
+
+Abre una cotización para ver sus responsables, avance y compromiso original. Usa Editar cotización y guarda los cambios. En Historial puedes revisar las actualizaciones. Si cierras un borrador, la app pide confirmar antes de descartarlo.
+
+En Equipo, pulsa Equilibrar carga. Revisa la propuesta y el cambio de carga estimado antes de aplicarla. También puedes cancelar. La recomendación usa horas y capacidad declaradas; acompáñala con el criterio del equipo.
+
+En Calendario, consulta las entregas por día, cambia de semana y vuelve a Hoy. Selecciona una cotización para abrir su detalle y revisar el siguiente paso.
+
+En Alertas, revisa la explicación de cada riesgo. Puedes preparar un mensaje para el cliente, ajustarlo y copiarlo. La demo genera un borrador; el envío lo realizas tú por el canal que prefieras.
+
+Cierra con Resumen ejecutivo. Muestra la distribución del trabajo y las prioridades de seguimiento. Usa Imprimir para guardar un pe de efe, o Exportar ce ese uve para trabajar con los datos de la selección.
+
+Antes de presentar, descarga un respaldo desde Configuración. Abre la app con internet y espera a ver Disponible sin conexión. Después podrás recargar y seguir trabajando aunque se corte la conexión.
+
+Activa la Guía de presentación para recorrer los módulos principales. Esta versión usa datos de ejemplo, roles simulados y guardado local en tu navegador. Cuout Asístent: cotizaciones, bajo control.

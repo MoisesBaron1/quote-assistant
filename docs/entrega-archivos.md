@@ -13,3 +13,9 @@ La compilación también genera copias en `dist/descargas` y `.vercel/output/sta
 Para retirar las descargas de la dirección pública, elimina los materiales de `public/descargas`, retira sus reglas de descarga en `vercel.json` y vuelve a desplegar. Para eliminar todas las copias alojadas, revisa y elimina también los despliegues anteriores que contengan estos archivos. Para borrar todas las copias de trabajo, elimina los archivos correspondientes de `shared/downloads`, los archivos duplicados en `public/descargas` y el MP4 en `videos/quote-assistant-video/renders`, conservando o eliminando el proyecto editable según se solicite. Borrar una copia local del teléfono no modifica esos originales ni los despliegues.
 
 Se conserva Vercel Hobby, con sus límites y condiciones; no se añadieron servicios o planes de pago.
+
+## Repositorio portable — 2026-10-11
+
+El código completo se entrega en https://github.com/MoisesBaron1/quote-assistant, público según la configuración elegida por el usuario. `video/` contiene el proyecto editable y sus activos. El MP4 original se incorpora ahora a Git en `public/descargas/quote-assistant-promocion-y-guia.mp4` (47.215.369 bytes, menor de 50 MiB), junto a las otras cuatro descargas; un clon no depende de carpetas externas ni Git LFS.
+
+Las ubicaciones `/workspace/...` anteriores documentan la sesión original. Desde una copia nueva, `npm run prepare:downloads` usa por defecto los activos de `public/descargas/`; el argumento de carpeta sigue disponible para reemplazarlos. El navegador puede ser el instalado por Playwright o `QUOTE_ASSISTANT_BROWSER_PATH`. La guía de continuidad y los pasos de Vercel están en [continuar-en-claude.md](continuar-en-claude.md).

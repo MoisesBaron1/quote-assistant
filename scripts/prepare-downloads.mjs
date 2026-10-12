@@ -4,11 +4,11 @@ import path from 'node:path';
 import {chromium} from '@playwright/test';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const source=path.resolve(process.argv[2]||path.join(root,'../shared/downloads'));
 const destination=path.join(root,'public/descargas');
+const source=path.resolve(process.argv[2]||destination);
 await mkdir(destination,{recursive:true});
 for(const name of ['quote-assistant-promocion-y-guia.mp4','quote-assistant-subtitulos.srt','quote-assistant-informe-demo.pdf']){
-  await copyFile(path.join(source,name),path.join(destination,name));
+  if(source!==destination)await copyFile(path.join(source,name),path.join(destination,name));
 }
 const markdown=await readFile(path.join(root,'docs/guia-presentacion.md'),'utf8');
 await writeFile(path.join(destination,'quote-assistant-guia-presentacion.md'),markdown);
@@ -23,7 +23,8 @@ const blocks=markdown.trim().split(/\n\s*\n/).map(block=>{
 const logo=await readFile(path.join(root,'public/favicon.svg'),'utf8');
 const guide=`<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Quote Assistant — guía de presentación</title><style>
 @page{size:A4;margin:16mm}*{box-sizing:border-box}body{font:14px/1.4 Arial,sans-serif;color:#202534;margin:0}header{display:flex;align-items:center;gap:12px;border-bottom:1px solid #dde1e8;padding-bottom:14px;margin-bottom:20px}header svg{width:36px;height:36px}header strong{font-size:20px;color:#171b2b}h1{font-size:26px;line-height:1.18;letter-spacing:-.7px;margin:0 0 20px;color:#171b2b}p{margin:0 0 14px}li{padding-left:5px;margin-bottom:12px;break-inside:avoid}ol{padding-left:22px}a{color:#3044d7;overflow-wrap:anywhere}footer{position:fixed;bottom:0;left:0;right:0;font-size:11px;color:#626a7a;border-top:1px solid #dde1e8;padding-top:6px}</style></head><body><header>${logo}<strong>Quote Assistant</strong></header>${blocks}<footer>Materiales de presentación · Demo con datos de ejemplo</footer></body></html>`;
-const browser=await chromium.launch({executablePath:process.env.QUOTE_ASSISTANT_BROWSER_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+const browserPath=process.env.QUOTE_ASSISTANT_BROWSER_PATH;
+const browser=await chromium.launch({...(browserPath?{executablePath:browserPath}:{}),args:['--no-sandbox']});
 try{
   const page=await browser.newPage();
   await page.setContent(guide,{waitUntil:'load'});
@@ -46,5 +47,5 @@ const html=`<!doctype html>
 <section class="delete"><h2>Cuando quieras eliminarlos</h2><p>En Archivos o tu administrador de archivos, mantén pulsado el video o la guía y elige <strong>Eliminar</strong>. Si existe una Papelera o carpeta Eliminado recientemente, vacíala para borrarlos definitivamente.</p><p>Borrar un archivo del teléfono elimina esa copia. Los materiales publicados en este sitio se administran desde el proyecto de Quote Assistant.</p></section>
 </main><footer>Quote Assistant · Materiales públicos de la demo, con datos de ejemplo.</footer></body></html>`;
 await writeFile(path.join(destination,'index.html'),html);
-await copyFile(path.join(destination,'quote-assistant-guia-presentacion.pdf'),path.join(source,'quote-assistant-guia-presentacion.pdf'));
+if(source!==destination)await copyFile(path.join(destination,'quote-assistant-guia-presentacion.pdf'),path.join(source,'quote-assistant-guia-presentacion.pdf'));
 console.log(JSON.stringify({directory:destination,videoBytes:videoSize,guidePdfBytes:pdfSize,files:['index.html','quote-assistant-promocion-y-guia.mp4','quote-assistant-guia-presentacion.pdf','quote-assistant-guia-presentacion.md','quote-assistant-subtitulos.srt','quote-assistant-informe-demo.pdf']},null,2));

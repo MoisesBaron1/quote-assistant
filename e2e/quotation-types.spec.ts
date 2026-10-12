@@ -54,8 +54,11 @@ test('new manual weekend dates are blocked while weekdays work',async({page})=>{
 });
 test('new policies survive backup import and reload',async({page})=>{
   await page.getByRole('button',{name:'Configuración',exact:true}).click();await page.getByLabel('Plazo base de Cotización de adicional').fill('3');await page.getByRole('button',{name:'Guardar configuración'}).click();
+  await expect(page.getByText('Configuración guardada',{exact:true})).toBeVisible();
   const download=page.waitForEvent('download');await page.getByRole('button',{name:'Descargar respaldo JSON'}).click();const backup=await download;const file=await backup.path();expect(file).toBeTruthy();
-  await page.getByLabel('Plazo base de Cotización de adicional').fill('7');await page.getByRole('button',{name:'Guardar configuración'}).click();await page.locator('input[type=file]').setInputFiles(file!);await page.getByRole('button',{name:'Importar datos',exact:true}).click();await expect(page.getByText('Respaldo importado',{exact:true})).toBeVisible();await page.reload();await expect(page.getByLabel('Plazo base de Cotización de adicional')).toHaveValue('3');
+  await page.getByLabel('Plazo base de Cotización de adicional').fill('7');await page.getByRole('button',{name:'Guardar configuración'}).click();
+  await expect(page.getByText('Configuración guardada',{exact:true})).toBeVisible();
+  await page.locator('input[type=file]').setInputFiles(file!);await page.getByRole('button',{name:'Importar datos',exact:true}).click();await expect(page.getByText('Respaldo importado',{exact:true})).toBeVisible();await page.reload();await expect(page.getByLabel('Plazo base de Cotización de adicional')).toHaveValue('3');
 });
 test('mobile cards fit the page and are accessible by keyboard',async({page})=>{
   await page.setViewportSize({width:390,height:844});await page.reload();await expect(page.locator('.quote-card')).toHaveCount(8);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

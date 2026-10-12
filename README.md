@@ -2,6 +2,21 @@
 
 MVP local en español construido a partir de la épica adjunta y ampliado por autorización del usuario. React, TypeScript y Vite; tipografía alojada con el sitio. Trabajo empieza vacío y Ejemplos conserva la demostración en un almacén separado.
 
+## Código y continuidad en Claude
+
+Repositorio: [MoisesBaron1/quote-assistant](https://github.com/MoisesBaron1/quote-assistant). Incluye el historial, la app, pruebas, materiales descargables y el proyecto editable de video en [video/](video/README.md). Las cotizaciones guardadas por el usuario permanecen en su navegador y se trasladan mediante respaldo JSON.
+
+[Continuar en Claude](docs/continuar-en-claude.md) explica las opciones web, computadora y chat. [CLAUDE.md](CLAUDE.md) conserva arquitectura, reglas, personas y restricciones; [primer mensaje](docs/claude-prompt.md) sirve para iniciar la sesión.
+
+El traspaso se verificó desde una copia limpia: 45 pruebas de lógica, 64 escenarios de navegador, instalación y compilación, regeneración de descargas y captura del video desde preview. [Informe del traspaso](docs/github-claude-verification.md).
+
+```sh
+git clone https://github.com/MoisesBaron1/quote-assistant.git
+cd quote-assistant
+bash scripts/setup-claude.sh --browser
+npm run dev
+```
+
 ## Presentación
 
 Activa el icono **Guía de presentación** en la barra superior para recorrer los seis módulos sin modificar datos.
@@ -30,19 +45,22 @@ El riesgo y la redistribución son heurísticas explicables basadas en fechas, h
 
 ## Desarrollo y verificación
 
-Requiere Node 22.12+; los tests de dominio con TypeScript nativo utilizan Node 24.
+Usa Node **24**, indicado en `.nvmrc` y `package.json`; las pruebas de dominio utilizan su soporte nativo de TypeScript.
 
 ```sh
 npm ci
+npx playwright install chromium
 npm run dev
 npm test
 npm run build
-npx playwright test
+npm run test:e2e
 ```
 
-Las pruebas de navegador usan los servidores locales en 5173 (desarrollo) y 4173 (preview de producción, para offline). Antes de ejecutarlas, inicia `npm run dev` y, en otra terminal, `npm run build && npm run preview -- --port 4173`.
+Las pruebas de navegador inician automáticamente los servidores locales en 5173 (desarrollo) y 4173 (preview de producción, para offline); el segundo compila antes de servir. En desarrollo pueden reutilizar servidores ya iniciados; en CI siempre arrancan desde cero. No es necesario iniciar `npm run dev` para ejecutar las pruebas.
 
-La configuración de Playwright usa `/usr/bin/chromium` para este entorno. Ajusta `executablePath` o instala el navegador de Playwright en otro equipo. Los tests cubren reglas de negocio, flujos principales, conflictos entre pestañas, almacenamiento fallido y controles WCAG automatizados. La inspección visual complementa las pruebas.
+Playwright usa su Chromium instalado. Si tienes un ejecutable propio, selecciónalo con `QUOTE_ASSISTANT_BROWSER_PATH=/ruta/a/chromium npm run test:e2e`. En Linux CI, `npx playwright install --with-deps chromium` instala también las bibliotecas del sistema. Los tests cubren reglas de negocio, flujos principales, conflictos entre pestañas, almacenamiento fallido y controles WCAG automatizados. La inspección visual complementa las pruebas.
+
+GitHub Actions ejecuta instalación, lógica, build y navegador en `main` y pull requests, sin desplegar ni necesitar secretos. La app continúa con almacenamiento local; este traspaso no configura autenticación, backend ni publicación automática.
 
 ## Despliegue
 

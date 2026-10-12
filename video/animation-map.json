@@ -1,0 +1,145 @@
+{
+  "duration": 139.22733333333332,
+  "deterministic": true,
+  "choreography": [
+    {
+      "scene": "hook",
+      "start": 0,
+      "voiceStart": 0.35,
+      "end": 8.04067,
+      "entrances": 7,
+      "images": [
+        "overview.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "overview",
+      "start": 7.59067,
+      "voiceStart": 8.39067,
+      "end": 20.86,
+      "entrances": 7,
+      "images": [
+        "overview.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "filter",
+      "start": 20.41,
+      "voiceStart": 21.21,
+      "end": 34.57533,
+      "entrances": 7,
+      "images": [
+        "filtered.png",
+        "filters.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "create",
+      "start": 34.12533,
+      "voiceStart": 34.92533,
+      "end": 46.392,
+      "entrances": 7,
+      "images": [
+        "new-quote.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "detail",
+      "start": 45.942,
+      "voiceStart": 46.742,
+      "end": 61.75,
+      "entrances": 7,
+      "images": [
+        "detail.png",
+        "edited.png",
+        "history.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "team",
+      "start": 61.3,
+      "voiceStart": 62.1,
+      "end": 75.956,
+      "entrances": 7,
+      "images": [
+        "team.png",
+        "rebalance.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "calendar",
+      "start": 75.506,
+      "voiceStart": 76.306,
+      "end": 86.386,
+      "entrances": 7,
+      "images": [
+        "calendar.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "alerts",
+      "start": 85.93599999999999,
+      "voiceStart": 86.736,
+      "end": 98.82132999999999,
+      "entrances": 7,
+      "images": [
+        "alerts.png",
+        "message.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "report",
+      "start": 98.37133,
+      "voiceStart": 99.17133,
+      "end": 111.854,
+      "entrances": 7,
+      "images": [
+        "report.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "backup",
+      "start": 111.404,
+      "voiceStart": 112.204,
+      "end": 124.82267,
+      "entrances": 7,
+      "images": [
+        "settings.png",
+        "offline-ready.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    },
+    {
+      "scene": "close",
+      "start": 124.37267,
+      "voiceStart": 125.17267,
+      "end": 139.22734,
+      "entrances": 7,
+      "images": [
+        "guide.png"
+      ],
+      "hold": "intentional reading and spoken instruction",
+      "transition": "0.45 second incoming crossfade; previous scene stays fully visible"
+    }
+  ],
+  "captionCues": 55
+}

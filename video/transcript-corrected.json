@@ -1,0 +1,1940 @@
+[
+  {
+    "text": "Cada",
+    "start": 0.0,
+    "end": 0.54,
+    "scene": "hook"
+  },
+  {
+    "text": "cotización",
+    "start": 0.54,
+    "end": 1.12,
+    "scene": "hook"
+  },
+  {
+    "text": "tiene",
+    "start": 1.12,
+    "end": 1.5,
+    "scene": "hook"
+  },
+  {
+    "text": "un",
+    "start": 1.5,
+    "end": 1.72,
+    "scene": "hook"
+  },
+  {
+    "text": "compromiso.",
+    "start": 1.72,
+    "end": 2.38,
+    "scene": "hook"
+  },
+  {
+    "text": "Quote",
+    "start": 2.72,
+    "end": 3.08,
+    "scene": "hook"
+  },
+  {
+    "text": "Assistant",
+    "start": 3.08,
+    "end": 3.44,
+    "scene": "hook"
+  },
+  {
+    "text": "te",
+    "start": 3.68,
+    "end": 3.76,
+    "scene": "hook"
+  },
+  {
+    "text": "ayuda",
+    "start": 3.76,
+    "end": 3.96,
+    "scene": "hook"
+  },
+  {
+    "text": "a",
+    "start": 3.96,
+    "end": 4.16,
+    "scene": "hook"
+  },
+  {
+    "text": "verlo,",
+    "start": 4.16,
+    "end": 4.5,
+    "scene": "hook"
+  },
+  {
+    "text": "darle",
+    "start": 4.76,
+    "end": 5.02,
+    "scene": "hook"
+  },
+  {
+    "text": "seguimiento",
+    "start": 5.02,
+    "end": 5.52,
+    "scene": "hook"
+  },
+  {
+    "text": "y",
+    "start": 5.52,
+    "end": 5.8,
+    "scene": "hook"
+  },
+  {
+    "text": "decidir",
+    "start": 5.8,
+    "end": 6.24,
+    "scene": "hook"
+  },
+  {
+    "text": "qué",
+    "start": 6.24,
+    "end": 6.38,
+    "scene": "hook"
+  },
+  {
+    "text": "hacer",
+    "start": 6.38,
+    "end": 6.58,
+    "scene": "hook"
+  },
+  {
+    "text": "después.",
+    "start": 6.58,
+    "end": 7.16,
+    "scene": "hook"
+  },
+  {
+    "text": "Empieza",
+    "start": 8.14,
+    "end": 8.8,
+    "scene": "overview"
+  },
+  {
+    "text": "en",
+    "start": 8.8,
+    "end": 8.98,
+    "scene": "overview"
+  },
+  {
+    "text": "Resumen.",
+    "start": 8.98,
+    "end": 9.46,
+    "scene": "overview"
+  },
+  {
+    "text": "Los",
+    "start": 9.88,
+    "end": 10.0,
+    "scene": "overview"
+  },
+  {
+    "text": "indicadores",
+    "start": 10.0,
+    "end": 10.64,
+    "scene": "overview"
+  },
+  {
+    "text": "muestran",
+    "start": 10.64,
+    "end": 11.16,
+    "scene": "overview"
+  },
+  {
+    "text": "el",
+    "start": 11.16,
+    "end": 11.34,
+    "scene": "overview"
+  },
+  {
+    "text": "estado",
+    "start": 11.34,
+    "end": 11.62,
+    "scene": "overview"
+  },
+  {
+    "text": "de",
+    "start": 11.62,
+    "end": 11.8,
+    "scene": "overview"
+  },
+  {
+    "text": "las",
+    "start": 11.8,
+    "end": 11.9,
+    "scene": "overview"
+  },
+  {
+    "text": "cotizaciones.",
+    "start": 11.9,
+    "end": 12.66,
+    "scene": "overview"
+  },
+  {
+    "text": "Más",
+    "start": 13.14,
+    "end": 13.26,
+    "scene": "overview"
+  },
+  {
+    "text": "abajo,",
+    "start": 13.26,
+    "end": 13.72,
+    "scene": "overview"
+  },
+  {
+    "text": "compara",
+    "start": 13.96,
+    "end": 14.3,
+    "scene": "overview"
+  },
+  {
+    "text": "las",
+    "start": 14.3,
+    "end": 14.52,
+    "scene": "overview"
+  },
+  {
+    "text": "horas",
+    "start": 14.52,
+    "end": 14.66,
+    "scene": "overview"
+  },
+  {
+    "text": "pendientes",
+    "start": 14.66,
+    "end": 15.32,
+    "scene": "overview"
+  },
+  {
+    "text": "con",
+    "start": 15.32,
+    "end": 15.54,
+    "scene": "overview"
+  },
+  {
+    "text": "la",
+    "start": 15.54,
+    "end": 15.66,
+    "scene": "overview"
+  },
+  {
+    "text": "capacidad",
+    "start": 15.66,
+    "end": 16.02,
+    "scene": "overview"
+  },
+  {
+    "text": "del",
+    "start": 16.02,
+    "end": 16.32,
+    "scene": "overview"
+  },
+  {
+    "text": "equipo.",
+    "start": 16.32,
+    "end": 16.66,
+    "scene": "overview"
+  },
+  {
+    "text": "Así",
+    "start": 17.14,
+    "end": 17.36,
+    "scene": "overview"
+  },
+  {
+    "text": "identificas",
+    "start": 17.36,
+    "end": 18.12,
+    "scene": "overview"
+  },
+  {
+    "text": "dónde",
+    "start": 18.12,
+    "end": 18.36,
+    "scene": "overview"
+  },
+  {
+    "text": "conviene",
+    "start": 18.36,
+    "end": 18.8,
+    "scene": "overview"
+  },
+  {
+    "text": "enfocar",
+    "start": 18.8,
+    "end": 19.24,
+    "scene": "overview"
+  },
+  {
+    "text": "tu",
+    "start": 19.24,
+    "end": 19.46,
+    "scene": "overview"
+  },
+  {
+    "text": "atención.",
+    "start": 19.46,
+    "end": 19.9,
+    "scene": "overview"
+  },
+  {
+    "text": "Para",
+    "start": 20.96,
+    "end": 21.36,
+    "scene": "filter"
+  },
+  {
+    "text": "actuar",
+    "start": 21.36,
+    "end": 21.66,
+    "scene": "filter"
+  },
+  {
+    "text": "sobre",
+    "start": 21.66,
+    "end": 21.92,
+    "scene": "filter"
+  },
+  {
+    "text": "un",
+    "start": 21.92,
+    "end": 22.06,
+    "scene": "filter"
+  },
+  {
+    "text": "indicador,",
+    "start": 22.06,
+    "end": 22.64,
+    "scene": "filter"
+  },
+  {
+    "text": "haz",
+    "start": 22.86,
+    "end": 23.0,
+    "scene": "filter"
+  },
+  {
+    "text": "clic",
+    "start": 23.0,
+    "end": 23.26,
+    "scene": "filter"
+  },
+  {
+    "text": "en",
+    "start": 23.26,
+    "end": 23.5,
+    "scene": "filter"
+  },
+  {
+    "text": "Retrasadas.",
+    "start": 23.5,
+    "end": 24.2,
+    "scene": "filter"
+  },
+  {
+    "text": "La",
+    "start": 24.7,
+    "end": 24.8,
+    "scene": "filter"
+  },
+  {
+    "text": "lista",
+    "start": 24.8,
+    "end": 25.06,
+    "scene": "filter"
+  },
+  {
+    "text": "se",
+    "start": 25.06,
+    "end": 25.28,
+    "scene": "filter"
+  },
+  {
+    "text": "filtra",
+    "start": 25.28,
+    "end": 25.62,
+    "scene": "filter"
+  },
+  {
+    "text": "automáticamente.",
+    "start": 25.62,
+    "end": 26.62,
+    "scene": "filter"
+  },
+  {
+    "text": "Puedes",
+    "start": 27.04,
+    "end": 27.3,
+    "scene": "filter"
+  },
+  {
+    "text": "combinar",
+    "start": 27.3,
+    "end": 27.7,
+    "scene": "filter"
+  },
+  {
+    "text": "responsables,",
+    "start": 27.7,
+    "end": 28.56,
+    "scene": "filter"
+  },
+  {
+    "text": "fechas",
+    "start": 28.88,
+    "end": 29.14,
+    "scene": "filter"
+  },
+  {
+    "text": "y",
+    "start": 29.14,
+    "end": 29.34,
+    "scene": "filter"
+  },
+  {
+    "text": "estado,",
+    "start": 29.34,
+    "end": 29.7,
+    "scene": "filter"
+  },
+  {
+    "text": "o",
+    "start": 29.7,
+    "end": 30.18,
+    "scene": "filter"
+  },
+  {
+    "text": "pulsar",
+    "start": 30.18,
+    "end": 30.54,
+    "scene": "filter"
+  },
+  {
+    "text": "Limpiar",
+    "start": 30.54,
+    "end": 30.98,
+    "scene": "filter"
+  },
+  {
+    "text": "filtros",
+    "start": 30.98,
+    "end": 31.48,
+    "scene": "filter"
+  },
+  {
+    "text": "para",
+    "start": 31.48,
+    "end": 31.72,
+    "scene": "filter"
+  },
+  {
+    "text": "volver",
+    "start": 31.72,
+    "end": 32.08,
+    "scene": "filter"
+  },
+  {
+    "text": "a",
+    "start": 32.08,
+    "end": 32.22,
+    "scene": "filter"
+  },
+  {
+    "text": "ver",
+    "start": 32.22,
+    "end": 32.36,
+    "scene": "filter"
+  },
+  {
+    "text": "todas",
+    "start": 32.36,
+    "end": 32.62,
+    "scene": "filter"
+  },
+  {
+    "text": "las",
+    "start": 32.62,
+    "end": 32.9,
+    "scene": "filter"
+  },
+  {
+    "text": "cotizaciones.",
+    "start": 32.9,
+    "end": 33.62,
+    "scene": "filter"
+  },
+  {
+    "text": "Para",
+    "start": 34.72,
+    "end": 35.08,
+    "scene": "create"
+  },
+  {
+    "text": "registrar",
+    "start": 35.08,
+    "end": 35.52,
+    "scene": "create"
+  },
+  {
+    "text": "una",
+    "start": 35.52,
+    "end": 35.74,
+    "scene": "create"
+  },
+  {
+    "text": "solicitud,",
+    "start": 35.74,
+    "end": 36.3,
+    "scene": "create"
+  },
+  {
+    "text": "pulsa",
+    "start": 36.6,
+    "end": 36.86,
+    "scene": "create"
+  },
+  {
+    "text": "Nueva",
+    "start": 36.86,
+    "end": 37.1,
+    "scene": "create"
+  },
+  {
+    "text": "cotización.",
+    "start": 37.1,
+    "end": 37.8,
+    "scene": "create"
+  },
+  {
+    "text": "Completa",
+    "start": 38.34,
+    "end": 38.66,
+    "scene": "create"
+  },
+  {
+    "text": "el",
+    "start": 38.66,
+    "end": 38.86,
+    "scene": "create"
+  },
+  {
+    "text": "proyecto,",
+    "start": 38.86,
+    "end": 39.34,
+    "scene": "create"
+  },
+  {
+    "text": "el",
+    "start": 39.56,
+    "end": 39.64,
+    "scene": "create"
+  },
+  {
+    "text": "cliente,",
+    "start": 39.64,
+    "end": 40.16,
+    "scene": "create"
+  },
+  {
+    "text": "los",
+    "start": 40.26,
+    "end": 40.34,
+    "scene": "create"
+  },
+  {
+    "text": "responsables",
+    "start": 40.34,
+    "end": 41.1,
+    "scene": "create"
+  },
+  {
+    "text": "y",
+    "start": 41.1,
+    "end": 41.28,
+    "scene": "create"
+  },
+  {
+    "text": "la",
+    "start": 41.28,
+    "end": 41.42,
+    "scene": "create"
+  },
+  {
+    "text": "fecha",
+    "start": 41.42,
+    "end": 41.72,
+    "scene": "create"
+  },
+  {
+    "text": "de",
+    "start": 41.72,
+    "end": 41.84,
+    "scene": "create"
+  },
+  {
+    "text": "entrega.",
+    "start": 41.84,
+    "end": 42.32,
+    "scene": "create"
+  },
+  {
+    "text": "Los",
+    "start": 42.74,
+    "end": 42.86,
+    "scene": "create"
+  },
+  {
+    "text": "campos",
+    "start": 42.86,
+    "end": 43.22,
+    "scene": "create"
+  },
+  {
+    "text": "obligatorios",
+    "start": 43.22,
+    "end": 43.94,
+    "scene": "create"
+  },
+  {
+    "text": "se",
+    "start": 43.94,
+    "end": 44.12,
+    "scene": "create"
+  },
+  {
+    "text": "señalan",
+    "start": 44.12,
+    "end": 44.56,
+    "scene": "create"
+  },
+  {
+    "text": "antes",
+    "start": 44.56,
+    "end": 44.96,
+    "scene": "create"
+  },
+  {
+    "text": "de",
+    "start": 44.96,
+    "end": 45.1,
+    "scene": "create"
+  },
+  {
+    "text": "guardar.",
+    "start": 45.1,
+    "end": 45.54,
+    "scene": "create"
+  },
+  {
+    "text": "Abre",
+    "start": 46.64,
+    "end": 46.94,
+    "scene": "detail"
+  },
+  {
+    "text": "una",
+    "start": 46.94,
+    "end": 47.08,
+    "scene": "detail"
+  },
+  {
+    "text": "cotización",
+    "start": 47.08,
+    "end": 47.64,
+    "scene": "detail"
+  },
+  {
+    "text": "para",
+    "start": 47.64,
+    "end": 47.96,
+    "scene": "detail"
+  },
+  {
+    "text": "ver",
+    "start": 47.96,
+    "end": 48.12,
+    "scene": "detail"
+  },
+  {
+    "text": "sus",
+    "start": 48.12,
+    "end": 48.32,
+    "scene": "detail"
+  },
+  {
+    "text": "responsables,",
+    "start": 48.32,
+    "end": 49.12,
+    "scene": "detail"
+  },
+  {
+    "text": "avance",
+    "start": 49.46,
+    "end": 49.8,
+    "scene": "detail"
+  },
+  {
+    "text": "y",
+    "start": 49.8,
+    "end": 49.98,
+    "scene": "detail"
+  },
+  {
+    "text": "compromiso",
+    "start": 49.98,
+    "end": 50.52,
+    "scene": "detail"
+  },
+  {
+    "text": "original.",
+    "start": 50.52,
+    "end": 51.04,
+    "scene": "detail"
+  },
+  {
+    "text": "Usa",
+    "start": 51.54,
+    "end": 51.74,
+    "scene": "detail"
+  },
+  {
+    "text": "Editar",
+    "start": 51.74,
+    "end": 52.08,
+    "scene": "detail"
+  },
+  {
+    "text": "cotización",
+    "start": 52.08,
+    "end": 52.68,
+    "scene": "detail"
+  },
+  {
+    "text": "y",
+    "start": 52.68,
+    "end": 52.92,
+    "scene": "detail"
+  },
+  {
+    "text": "guarda",
+    "start": 52.92,
+    "end": 53.28,
+    "scene": "detail"
+  },
+  {
+    "text": "los",
+    "start": 53.28,
+    "end": 53.42,
+    "scene": "detail"
+  },
+  {
+    "text": "cambios.",
+    "start": 53.42,
+    "end": 53.94,
+    "scene": "detail"
+  },
+  {
+    "text": "En",
+    "start": 54.26,
+    "end": 54.36,
+    "scene": "detail"
+  },
+  {
+    "text": "Historial",
+    "start": 54.36,
+    "end": 54.74,
+    "scene": "detail"
+  },
+  {
+    "text": "puedes",
+    "start": 54.74,
+    "end": 55.12,
+    "scene": "detail"
+  },
+  {
+    "text": "revisar",
+    "start": 55.12,
+    "end": 55.6,
+    "scene": "detail"
+  },
+  {
+    "text": "las",
+    "start": 55.6,
+    "end": 55.78,
+    "scene": "detail"
+  },
+  {
+    "text": "actualizaciones.",
+    "start": 55.78,
+    "end": 56.68,
+    "scene": "detail"
+  },
+  {
+    "text": "Si",
+    "start": 56.68,
+    "end": 57.22,
+    "scene": "detail"
+  },
+  {
+    "text": "cierras",
+    "start": 57.22,
+    "end": 57.52,
+    "scene": "detail"
+  },
+  {
+    "text": "un",
+    "start": 57.52,
+    "end": 57.72,
+    "scene": "detail"
+  },
+  {
+    "text": "borrador,",
+    "start": 57.72,
+    "end": 58.12,
+    "scene": "detail"
+  },
+  {
+    "text": "la",
+    "start": 58.52,
+    "end": 58.54,
+    "scene": "detail"
+  },
+  {
+    "text": "app",
+    "start": 58.54,
+    "end": 58.76,
+    "scene": "detail"
+  },
+  {
+    "text": "pide",
+    "start": 58.76,
+    "end": 59.1,
+    "scene": "detail"
+  },
+  {
+    "text": "confirmar",
+    "start": 59.1,
+    "end": 59.66,
+    "scene": "detail"
+  },
+  {
+    "text": "antes",
+    "start": 59.66,
+    "end": 60.02,
+    "scene": "detail"
+  },
+  {
+    "text": "de",
+    "start": 60.02,
+    "end": 60.18,
+    "scene": "detail"
+  },
+  {
+    "text": "descartarlo.",
+    "start": 60.18,
+    "end": 60.88,
+    "scene": "detail"
+  },
+  {
+    "text": "En",
+    "start": 61.52,
+    "end": 62.2,
+    "scene": "team"
+  },
+  {
+    "text": "Equipo,",
+    "start": 62.2,
+    "end": 62.48,
+    "scene": "team"
+  },
+  {
+    "text": "pulsa",
+    "start": 62.72,
+    "end": 62.98,
+    "scene": "team"
+  },
+  {
+    "text": "Equilibrar",
+    "start": 62.98,
+    "end": 63.44,
+    "scene": "team"
+  },
+  {
+    "text": "carga.",
+    "start": 63.44,
+    "end": 63.88,
+    "scene": "team"
+  },
+  {
+    "text": "Revisa",
+    "start": 64.36,
+    "end": 64.7,
+    "scene": "team"
+  },
+  {
+    "text": "la",
+    "start": 64.7,
+    "end": 64.78,
+    "scene": "team"
+  },
+  {
+    "text": "propuesta",
+    "start": 64.78,
+    "end": 65.32,
+    "scene": "team"
+  },
+  {
+    "text": "y",
+    "start": 65.32,
+    "end": 65.44,
+    "scene": "team"
+  },
+  {
+    "text": "el",
+    "start": 65.44,
+    "end": 65.56,
+    "scene": "team"
+  },
+  {
+    "text": "cambio",
+    "start": 65.56,
+    "end": 65.84,
+    "scene": "team"
+  },
+  {
+    "text": "de",
+    "start": 65.84,
+    "end": 66.0,
+    "scene": "team"
+  },
+  {
+    "text": "carga",
+    "start": 66.0,
+    "end": 66.22,
+    "scene": "team"
+  },
+  {
+    "text": "estimado",
+    "start": 66.22,
+    "end": 66.76,
+    "scene": "team"
+  },
+  {
+    "text": "antes",
+    "start": 66.76,
+    "end": 67.12,
+    "scene": "team"
+  },
+  {
+    "text": "de",
+    "start": 67.12,
+    "end": 67.28,
+    "scene": "team"
+  },
+  {
+    "text": "aplicarla.",
+    "start": 67.28,
+    "end": 67.9,
+    "scene": "team"
+  },
+  {
+    "text": "También",
+    "start": 68.24,
+    "end": 68.54,
+    "scene": "team"
+  },
+  {
+    "text": "puedes",
+    "start": 68.54,
+    "end": 68.9,
+    "scene": "team"
+  },
+  {
+    "text": "cancelar.",
+    "start": 68.9,
+    "end": 69.64,
+    "scene": "team"
+  },
+  {
+    "text": "La",
+    "start": 70.0,
+    "end": 70.06,
+    "scene": "team"
+  },
+  {
+    "text": "recomendación",
+    "start": 70.06,
+    "end": 70.74,
+    "scene": "team"
+  },
+  {
+    "text": "usa",
+    "start": 70.74,
+    "end": 71.1,
+    "scene": "team"
+  },
+  {
+    "text": "horas",
+    "start": 71.1,
+    "end": 71.44,
+    "scene": "team"
+  },
+  {
+    "text": "y",
+    "start": 71.44,
+    "end": 71.66,
+    "scene": "team"
+  },
+  {
+    "text": "capacidad",
+    "start": 71.66,
+    "end": 71.92,
+    "scene": "team"
+  },
+  {
+    "text": "declaradas;",
+    "start": 71.92,
+    "end": 72.82,
+    "scene": "team"
+  },
+  {
+    "text": "acompáñala",
+    "start": 72.82,
+    "end": 73.7,
+    "scene": "team"
+  },
+  {
+    "text": "con",
+    "start": 73.7,
+    "end": 73.94,
+    "scene": "team"
+  },
+  {
+    "text": "el",
+    "start": 73.94,
+    "end": 74.08,
+    "scene": "team"
+  },
+  {
+    "text": "criterio",
+    "start": 74.08,
+    "end": 74.54,
+    "scene": "team"
+  },
+  {
+    "text": "del",
+    "start": 74.54,
+    "end": 74.66,
+    "scene": "team"
+  },
+  {
+    "text": "equipo.",
+    "start": 74.66,
+    "end": 75.04,
+    "scene": "team"
+  },
+  {
+    "text": "En",
+    "start": 75.74,
+    "end": 76.42,
+    "scene": "calendar"
+  },
+  {
+    "text": "Calendario,",
+    "start": 76.42,
+    "end": 77.0,
+    "scene": "calendar"
+  },
+  {
+    "text": "consulta",
+    "start": 77.24,
+    "end": 77.68,
+    "scene": "calendar"
+  },
+  {
+    "text": "las",
+    "start": 77.68,
+    "end": 77.82,
+    "scene": "calendar"
+  },
+  {
+    "text": "entregas",
+    "start": 77.82,
+    "end": 78.3,
+    "scene": "calendar"
+  },
+  {
+    "text": "por",
+    "start": 78.3,
+    "end": 78.54,
+    "scene": "calendar"
+  },
+  {
+    "text": "día,",
+    "start": 78.54,
+    "end": 78.86,
+    "scene": "calendar"
+  },
+  {
+    "text": "cambia",
+    "start": 79.1,
+    "end": 79.38,
+    "scene": "calendar"
+  },
+  {
+    "text": "de",
+    "start": 79.38,
+    "end": 79.48,
+    "scene": "calendar"
+  },
+  {
+    "text": "semana",
+    "start": 79.48,
+    "end": 79.78,
+    "scene": "calendar"
+  },
+  {
+    "text": "y",
+    "start": 79.78,
+    "end": 80.14,
+    "scene": "calendar"
+  },
+  {
+    "text": "vuelve",
+    "start": 80.14,
+    "end": 80.5,
+    "scene": "calendar"
+  },
+  {
+    "text": "a",
+    "start": 80.5,
+    "end": 80.64,
+    "scene": "calendar"
+  },
+  {
+    "text": "Hoy.",
+    "start": 80.64,
+    "end": 80.92,
+    "scene": "calendar"
+  },
+  {
+    "text": "Selecciona",
+    "start": 81.44,
+    "end": 81.88,
+    "scene": "calendar"
+  },
+  {
+    "text": "una",
+    "start": 81.88,
+    "end": 82.1,
+    "scene": "calendar"
+  },
+  {
+    "text": "cotización",
+    "start": 82.1,
+    "end": 82.58,
+    "scene": "calendar"
+  },
+  {
+    "text": "para",
+    "start": 82.58,
+    "end": 82.98,
+    "scene": "calendar"
+  },
+  {
+    "text": "abrir",
+    "start": 82.98,
+    "end": 83.2,
+    "scene": "calendar"
+  },
+  {
+    "text": "su",
+    "start": 83.2,
+    "end": 83.42,
+    "scene": "calendar"
+  },
+  {
+    "text": "detalle",
+    "start": 83.42,
+    "end": 83.82,
+    "scene": "calendar"
+  },
+  {
+    "text": "y",
+    "start": 83.82,
+    "end": 84.12,
+    "scene": "calendar"
+  },
+  {
+    "text": "revisar",
+    "start": 84.12,
+    "end": 84.52,
+    "scene": "calendar"
+  },
+  {
+    "text": "el",
+    "start": 84.52,
+    "end": 84.7,
+    "scene": "calendar"
+  },
+  {
+    "text": "siguiente",
+    "start": 84.7,
+    "end": 85.0,
+    "scene": "calendar"
+  },
+  {
+    "text": "paso.",
+    "start": 85.0,
+    "end": 85.46,
+    "scene": "calendar"
+  },
+  {
+    "text": "En",
+    "start": 86.68,
+    "end": 86.86,
+    "scene": "alerts"
+  },
+  {
+    "text": "Alertas,",
+    "start": 86.86,
+    "end": 87.36,
+    "scene": "alerts"
+  },
+  {
+    "text": "revisa",
+    "start": 87.48,
+    "end": 87.82,
+    "scene": "alerts"
+  },
+  {
+    "text": "la",
+    "start": 87.82,
+    "end": 87.9,
+    "scene": "alerts"
+  },
+  {
+    "text": "explicación",
+    "start": 87.9,
+    "end": 88.54,
+    "scene": "alerts"
+  },
+  {
+    "text": "de",
+    "start": 88.54,
+    "end": 88.7,
+    "scene": "alerts"
+  },
+  {
+    "text": "cada",
+    "start": 88.7,
+    "end": 88.94,
+    "scene": "alerts"
+  },
+  {
+    "text": "riesgo.",
+    "start": 88.94,
+    "end": 89.46,
+    "scene": "alerts"
+  },
+  {
+    "text": "Puedes",
+    "start": 89.78,
+    "end": 89.96,
+    "scene": "alerts"
+  },
+  {
+    "text": "preparar",
+    "start": 89.96,
+    "end": 90.42,
+    "scene": "alerts"
+  },
+  {
+    "text": "un",
+    "start": 90.42,
+    "end": 90.56,
+    "scene": "alerts"
+  },
+  {
+    "text": "mensaje",
+    "start": 90.56,
+    "end": 90.98,
+    "scene": "alerts"
+  },
+  {
+    "text": "para",
+    "start": 90.98,
+    "end": 91.18,
+    "scene": "alerts"
+  },
+  {
+    "text": "el",
+    "start": 91.18,
+    "end": 91.3,
+    "scene": "alerts"
+  },
+  {
+    "text": "cliente,",
+    "start": 91.3,
+    "end": 91.8,
+    "scene": "alerts"
+  },
+  {
+    "text": "ajustarlo",
+    "start": 91.94,
+    "end": 92.46,
+    "scene": "alerts"
+  },
+  {
+    "text": "y",
+    "start": 92.46,
+    "end": 92.64,
+    "scene": "alerts"
+  },
+  {
+    "text": "copiarlo.",
+    "start": 92.64,
+    "end": 93.24,
+    "scene": "alerts"
+  },
+  {
+    "text": "La",
+    "start": 93.54,
+    "end": 93.72,
+    "scene": "alerts"
+  },
+  {
+    "text": "demo",
+    "start": 93.72,
+    "end": 93.94,
+    "scene": "alerts"
+  },
+  {
+    "text": "genera",
+    "start": 93.94,
+    "end": 94.38,
+    "scene": "alerts"
+  },
+  {
+    "text": "un",
+    "start": 94.38,
+    "end": 94.48,
+    "scene": "alerts"
+  },
+  {
+    "text": "borrador;",
+    "start": 94.48,
+    "end": 94.92,
+    "scene": "alerts"
+  },
+  {
+    "text": "el",
+    "start": 95.3,
+    "end": 95.38,
+    "scene": "alerts"
+  },
+  {
+    "text": "envío",
+    "start": 95.38,
+    "end": 95.7,
+    "scene": "alerts"
+  },
+  {
+    "text": "lo",
+    "start": 95.7,
+    "end": 95.82,
+    "scene": "alerts"
+  },
+  {
+    "text": "realizas",
+    "start": 95.82,
+    "end": 96.38,
+    "scene": "alerts"
+  },
+  {
+    "text": "tú",
+    "start": 96.38,
+    "end": 96.6,
+    "scene": "alerts"
+  },
+  {
+    "text": "por",
+    "start": 96.6,
+    "end": 96.78,
+    "scene": "alerts"
+  },
+  {
+    "text": "el",
+    "start": 96.78,
+    "end": 96.9,
+    "scene": "alerts"
+  },
+  {
+    "text": "canal",
+    "start": 96.9,
+    "end": 97.14,
+    "scene": "alerts"
+  },
+  {
+    "text": "que",
+    "start": 97.14,
+    "end": 97.34,
+    "scene": "alerts"
+  },
+  {
+    "text": "prefieras.",
+    "start": 97.34,
+    "end": 98.0,
+    "scene": "alerts"
+  },
+  {
+    "text": "Cierra",
+    "start": 99.08,
+    "end": 99.48,
+    "scene": "report"
+  },
+  {
+    "text": "con",
+    "start": 99.48,
+    "end": 99.72,
+    "scene": "report"
+  },
+  {
+    "text": "Resumen",
+    "start": 99.72,
+    "end": 100.14,
+    "scene": "report"
+  },
+  {
+    "text": "ejecutivo.",
+    "start": 100.14,
+    "end": 100.88,
+    "scene": "report"
+  },
+  {
+    "text": "Muestra",
+    "start": 101.26,
+    "end": 101.56,
+    "scene": "report"
+  },
+  {
+    "text": "la",
+    "start": 101.56,
+    "end": 101.7,
+    "scene": "report"
+  },
+  {
+    "text": "distribución",
+    "start": 101.7,
+    "end": 102.24,
+    "scene": "report"
+  },
+  {
+    "text": "del",
+    "start": 102.24,
+    "end": 102.42,
+    "scene": "report"
+  },
+  {
+    "text": "trabajo",
+    "start": 102.42,
+    "end": 102.86,
+    "scene": "report"
+  },
+  {
+    "text": "y",
+    "start": 102.86,
+    "end": 103.14,
+    "scene": "report"
+  },
+  {
+    "text": "las",
+    "start": 103.14,
+    "end": 103.3,
+    "scene": "report"
+  },
+  {
+    "text": "prioridades",
+    "start": 103.3,
+    "end": 103.82,
+    "scene": "report"
+  },
+  {
+    "text": "de",
+    "start": 103.82,
+    "end": 104.04,
+    "scene": "report"
+  },
+  {
+    "text": "seguimiento.",
+    "start": 104.04,
+    "end": 104.6,
+    "scene": "report"
+  },
+  {
+    "text": "Usa",
+    "start": 105.16,
+    "end": 105.36,
+    "scene": "report"
+  },
+  {
+    "text": "Imprimir",
+    "start": 105.36,
+    "end": 105.88,
+    "scene": "report"
+  },
+  {
+    "text": "para",
+    "start": 105.88,
+    "end": 106.08,
+    "scene": "report"
+  },
+  {
+    "text": "guardar",
+    "start": 106.08,
+    "end": 106.48,
+    "scene": "report"
+  },
+  {
+    "text": "un",
+    "start": 106.48,
+    "end": 106.6,
+    "scene": "report"
+  },
+  {
+    "text": "PDF,",
+    "start": 106.6,
+    "end": 106.9,
+    "scene": "report"
+  },
+  {
+    "text": "o",
+    "start": 106.9,
+    "end": 107.48,
+    "scene": "report"
+  },
+  {
+    "text": "Exportar",
+    "start": 107.48,
+    "end": 108.13,
+    "scene": "report"
+  },
+  {
+    "text": "CSV",
+    "start": 108.13,
+    "end": 108.78,
+    "scene": "report"
+  },
+  {
+    "text": "para",
+    "start": 108.78,
+    "end": 108.98,
+    "scene": "report"
+  },
+  {
+    "text": "trabajar",
+    "start": 108.98,
+    "end": 109.42,
+    "scene": "report"
+  },
+  {
+    "text": "con",
+    "start": 109.42,
+    "end": 109.7,
+    "scene": "report"
+  },
+  {
+    "text": "los",
+    "start": 109.7,
+    "end": 109.88,
+    "scene": "report"
+  },
+  {
+    "text": "datos",
+    "start": 109.88,
+    "end": 110.1,
+    "scene": "report"
+  },
+  {
+    "text": "de",
+    "start": 110.1,
+    "end": 110.28,
+    "scene": "report"
+  },
+  {
+    "text": "la",
+    "start": 110.28,
+    "end": 110.38,
+    "scene": "report"
+  },
+  {
+    "text": "selección.",
+    "start": 110.38,
+    "end": 110.92,
+    "scene": "report"
+  },
+  {
+    "text": "Antes",
+    "start": 112.06,
+    "end": 112.46,
+    "scene": "backup"
+  },
+  {
+    "text": "de",
+    "start": 112.46,
+    "end": 112.6,
+    "scene": "backup"
+  },
+  {
+    "text": "presentar,",
+    "start": 112.6,
+    "end": 113.24,
+    "scene": "backup"
+  },
+  {
+    "text": "descarga",
+    "start": 113.44,
+    "end": 113.86,
+    "scene": "backup"
+  },
+  {
+    "text": "un",
+    "start": 113.86,
+    "end": 114.0,
+    "scene": "backup"
+  },
+  {
+    "text": "respaldo",
+    "start": 114.0,
+    "end": 114.46,
+    "scene": "backup"
+  },
+  {
+    "text": "desde",
+    "start": 114.46,
+    "end": 114.74,
+    "scene": "backup"
+  },
+  {
+    "text": "Configuración.",
+    "start": 114.74,
+    "end": 115.62,
+    "scene": "backup"
+  },
+  {
+    "text": "Abre",
+    "start": 115.62,
+    "end": 116.32,
+    "scene": "backup"
+  },
+  {
+    "text": "la",
+    "start": 116.32,
+    "end": 116.5,
+    "scene": "backup"
+  },
+  {
+    "text": "app",
+    "start": 116.5,
+    "end": 116.68,
+    "scene": "backup"
+  },
+  {
+    "text": "con",
+    "start": 116.68,
+    "end": 116.94,
+    "scene": "backup"
+  },
+  {
+    "text": "internet",
+    "start": 116.94,
+    "end": 117.22,
+    "scene": "backup"
+  },
+  {
+    "text": "y",
+    "start": 117.22,
+    "end": 117.66,
+    "scene": "backup"
+  },
+  {
+    "text": "espera",
+    "start": 117.66,
+    "end": 118.02,
+    "scene": "backup"
+  },
+  {
+    "text": "a",
+    "start": 118.02,
+    "end": 118.32,
+    "scene": "backup"
+  },
+  {
+    "text": "ver",
+    "start": 118.32,
+    "end": 118.62,
+    "scene": "backup"
+  },
+  {
+    "text": "Disponible",
+    "start": 118.62,
+    "end": 118.92,
+    "scene": "backup"
+  },
+  {
+    "text": "sin",
+    "start": 118.92,
+    "end": 119.12,
+    "scene": "backup"
+  },
+  {
+    "text": "conexión.",
+    "start": 119.12,
+    "end": 119.74,
+    "scene": "backup"
+  },
+  {
+    "text": "Después",
+    "start": 120.22,
+    "end": 120.48,
+    "scene": "backup"
+  },
+  {
+    "text": "podrás",
+    "start": 120.48,
+    "end": 120.94,
+    "scene": "backup"
+  },
+  {
+    "text": "recargar",
+    "start": 120.94,
+    "end": 121.38,
+    "scene": "backup"
+  },
+  {
+    "text": "y",
+    "start": 121.38,
+    "end": 121.64,
+    "scene": "backup"
+  },
+  {
+    "text": "seguir",
+    "start": 121.64,
+    "end": 121.92,
+    "scene": "backup"
+  },
+  {
+    "text": "trabajando",
+    "start": 121.92,
+    "end": 122.38,
+    "scene": "backup"
+  },
+  {
+    "text": "aunque",
+    "start": 122.38,
+    "end": 122.78,
+    "scene": "backup"
+  },
+  {
+    "text": "se",
+    "start": 122.78,
+    "end": 122.94,
+    "scene": "backup"
+  },
+  {
+    "text": "corte",
+    "start": 122.94,
+    "end": 123.3,
+    "scene": "backup"
+  },
+  {
+    "text": "la",
+    "start": 123.3,
+    "end": 123.38,
+    "scene": "backup"
+  },
+  {
+    "text": "conexión.",
+    "start": 123.38,
+    "end": 123.96,
+    "scene": "backup"
+  },
+  {
+    "text": "Activa",
+    "start": 125.14,
+    "end": 125.5,
+    "scene": "close"
+  },
+  {
+    "text": "la",
+    "start": 125.5,
+    "end": 125.64,
+    "scene": "close"
+  },
+  {
+    "text": "Guía",
+    "start": 125.64,
+    "end": 125.84,
+    "scene": "close"
+  },
+  {
+    "text": "de",
+    "start": 125.84,
+    "end": 125.92,
+    "scene": "close"
+  },
+  {
+    "text": "presentación",
+    "start": 125.92,
+    "end": 126.6,
+    "scene": "close"
+  },
+  {
+    "text": "para",
+    "start": 126.6,
+    "end": 126.9,
+    "scene": "close"
+  },
+  {
+    "text": "recorrer",
+    "start": 126.9,
+    "end": 127.32,
+    "scene": "close"
+  },
+  {
+    "text": "los",
+    "start": 127.32,
+    "end": 127.52,
+    "scene": "close"
+  },
+  {
+    "text": "módulos",
+    "start": 127.52,
+    "end": 127.88,
+    "scene": "close"
+  },
+  {
+    "text": "principales.",
+    "start": 127.88,
+    "end": 128.72,
+    "scene": "close"
+  },
+  {
+    "text": "Esta",
+    "start": 129.14,
+    "end": 129.34,
+    "scene": "close"
+  },
+  {
+    "text": "versión",
+    "start": 129.34,
+    "end": 129.7,
+    "scene": "close"
+  },
+  {
+    "text": "usa",
+    "start": 129.7,
+    "end": 130.0,
+    "scene": "close"
+  },
+  {
+    "text": "datos",
+    "start": 130.0,
+    "end": 130.26,
+    "scene": "close"
+  },
+  {
+    "text": "de",
+    "start": 130.26,
+    "end": 130.44,
+    "scene": "close"
+  },
+  {
+    "text": "ejemplo,",
+    "start": 130.44,
+    "end": 130.8,
+    "scene": "close"
+  },
+  {
+    "text": "roles",
+    "start": 131.14,
+    "end": 131.32,
+    "scene": "close"
+  },
+  {
+    "text": "simulados",
+    "start": 131.32,
+    "end": 131.9,
+    "scene": "close"
+  },
+  {
+    "text": "y",
+    "start": 131.9,
+    "end": 132.14,
+    "scene": "close"
+  },
+  {
+    "text": "guardado",
+    "start": 132.14,
+    "end": 132.46,
+    "scene": "close"
+  },
+  {
+    "text": "local",
+    "start": 132.46,
+    "end": 132.8,
+    "scene": "close"
+  },
+  {
+    "text": "en",
+    "start": 132.8,
+    "end": 133.06,
+    "scene": "close"
+  },
+  {
+    "text": "tu",
+    "start": 133.06,
+    "end": 133.22,
+    "scene": "close"
+  },
+  {
+    "text": "navegador.",
+    "start": 133.22,
+    "end": 133.82,
+    "scene": "close"
+  },
+  {
+    "text": "Quote",
+    "start": 134.32,
+    "end": 134.56,
+    "scene": "close"
+  },
+  {
+    "text": "Assistant:",
+    "start": 134.56,
+    "end": 135.02,
+    "scene": "close"
+  },
+  {
+    "text": "cotizaciones,",
+    "start": 135.36,
+    "end": 135.98,
+    "scene": "close"
+  },
+  {
+    "text": "bajo",
+    "start": 135.98,
+    "end": 136.28,
+    "scene": "close"
+  },
+  {
+    "text": "control.",
+    "start": 136.28,
+    "end": 136.76,
+    "scene": "close"
+  }
+]

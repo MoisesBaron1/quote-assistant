@@ -1,0 +1,277 @@
+[
+  {
+    "text": "Cada cotización tiene un compromiso.",
+    "start": 0.0,
+    "end": 2.5
+  },
+  {
+    "text": "Quote Assistant te ayuda a verlo, darle seguimiento",
+    "start": 2.72,
+    "end": 5.52
+  },
+  {
+    "text": "y decidir qué hacer después.",
+    "start": 5.52,
+    "end": 7.28
+  },
+  {
+    "text": "Empieza en Resumen.",
+    "start": 8.14,
+    "end": 9.58
+  },
+  {
+    "text": "Los indicadores muestran el estado de las cotizaciones.",
+    "start": 9.88,
+    "end": 12.78
+  },
+  {
+    "text": "Más abajo, compara las horas pendientes con la",
+    "start": 13.14,
+    "end": 15.66
+  },
+  {
+    "text": "capacidad del equipo.",
+    "start": 15.66,
+    "end": 16.78
+  },
+  {
+    "text": "Así identificas dónde conviene enfocar tu atención.",
+    "start": 17.14,
+    "end": 20.02
+  },
+  {
+    "text": "Para actuar sobre un indicador, haz clic en",
+    "start": 20.96,
+    "end": 23.5
+  },
+  {
+    "text": "Retrasadas.",
+    "start": 23.5,
+    "end": 24.32
+  },
+  {
+    "text": "La lista se filtra automáticamente.",
+    "start": 24.7,
+    "end": 26.740000000000002
+  },
+  {
+    "text": "Puedes combinar responsables, fechas y estado, o pulsar",
+    "start": 27.04,
+    "end": 30.54
+  },
+  {
+    "text": "Limpiar filtros para volver a ver todas las",
+    "start": 30.54,
+    "end": 32.9
+  },
+  {
+    "text": "cotizaciones.",
+    "start": 32.9,
+    "end": 33.739999999999995
+  },
+  {
+    "text": "Para registrar una solicitud, pulsa Nueva cotización.",
+    "start": 34.72,
+    "end": 37.919999999999995
+  },
+  {
+    "text": "Completa el proyecto, el cliente, los responsables y",
+    "start": 38.34,
+    "end": 41.28
+  },
+  {
+    "text": "la fecha de entrega.",
+    "start": 41.28,
+    "end": 42.44
+  },
+  {
+    "text": "Los campos obligatorios se señalan antes de guardar.",
+    "start": 42.74,
+    "end": 45.66
+  },
+  {
+    "text": "Abre una cotización para ver sus responsables, avance",
+    "start": 46.64,
+    "end": 49.8
+  },
+  {
+    "text": "y compromiso original.",
+    "start": 49.8,
+    "end": 51.16
+  },
+  {
+    "text": "Usa Editar cotización y guarda los cambios.",
+    "start": 51.54,
+    "end": 54.059999999999995
+  },
+  {
+    "text": "En Historial puedes revisar las actualizaciones.",
+    "start": 54.26,
+    "end": 56.68
+  },
+  {
+    "text": "Si cierras un borrador,",
+    "start": 56.68,
+    "end": 58.239999999999995
+  },
+  {
+    "text": "la app pide confirmar antes de descartarlo.",
+    "start": 58.52,
+    "end": 61.0
+  },
+  {
+    "text": "En Equipo, pulsa Equilibrar carga.",
+    "start": 61.52,
+    "end": 64.0
+  },
+  {
+    "text": "Revisa la propuesta y el cambio de carga",
+    "start": 64.36,
+    "end": 66.22
+  },
+  {
+    "text": "estimado antes de aplicarla.",
+    "start": 66.22,
+    "end": 68.02000000000001
+  },
+  {
+    "text": "También puedes cancelar.",
+    "start": 68.24,
+    "end": 69.76
+  },
+  {
+    "text": "La recomendación usa horas y capacidad declaradas;",
+    "start": 70.0,
+    "end": 72.82
+  },
+  {
+    "text": "acompáñala con el criterio del equipo.",
+    "start": 72.82,
+    "end": 75.16000000000001
+  },
+  {
+    "text": "En Calendario, consulta las entregas por día, cambia",
+    "start": 75.74,
+    "end": 79.38
+  },
+  {
+    "text": "de semana y vuelve a Hoy.",
+    "start": 79.38,
+    "end": 81.04
+  },
+  {
+    "text": "Selecciona una cotización para abrir su detalle y",
+    "start": 81.44,
+    "end": 84.12
+  },
+  {
+    "text": "revisar el siguiente paso.",
+    "start": 84.12,
+    "end": 85.58
+  },
+  {
+    "text": "En Alertas, revisa la explicación de cada riesgo.",
+    "start": 86.68,
+    "end": 89.58
+  },
+  {
+    "text": "Puedes preparar un mensaje para el cliente, ajustarlo",
+    "start": 89.78,
+    "end": 92.46
+  },
+  {
+    "text": "y copiarlo. La demo genera un borrador;",
+    "start": 92.46,
+    "end": 95.04
+  },
+  {
+    "text": "el envío lo realizas tú por el canal",
+    "start": 95.3,
+    "end": 97.14
+  },
+  {
+    "text": "que prefieras.",
+    "start": 97.14,
+    "end": 98.12
+  },
+  {
+    "text": "Cierra con Resumen ejecutivo.",
+    "start": 99.08,
+    "end": 101.0
+  },
+  {
+    "text": "Muestra la distribución del trabajo y las prioridades",
+    "start": 101.26,
+    "end": 103.82
+  },
+  {
+    "text": "de seguimiento.",
+    "start": 103.82,
+    "end": 104.72
+  },
+  {
+    "text": "Usa Imprimir para guardar un PDF, o Exportar",
+    "start": 105.16,
+    "end": 108.13
+  },
+  {
+    "text": "CSV para trabajar con los datos de la",
+    "start": 108.13,
+    "end": 110.38
+  },
+  {
+    "text": "selección.",
+    "start": 110.38,
+    "end": 111.04
+  },
+  {
+    "text": "Antes de presentar, descarga un respaldo desde Configuración.",
+    "start": 112.06,
+    "end": 115.62
+  },
+  {
+    "text": "Abre la app con internet y espera a",
+    "start": 115.62,
+    "end": 118.32
+  },
+  {
+    "text": "ver Disponible sin conexión.",
+    "start": 118.32,
+    "end": 119.86
+  },
+  {
+    "text": "Después podrás recargar y seguir trabajando aunque se",
+    "start": 120.22,
+    "end": 122.94
+  },
+  {
+    "text": "corte la conexión.",
+    "start": 122.94,
+    "end": 124.08
+  },
+  {
+    "text": "Activa la Guía de presentación para recorrer los",
+    "start": 125.14,
+    "end": 127.52
+  },
+  {
+    "text": "módulos principales.",
+    "start": 127.52,
+    "end": 128.84
+  },
+  {
+    "text": "Esta versión usa datos de ejemplo, roles simulados",
+    "start": 129.14,
+    "end": 131.9
+  },
+  {
+    "text": "y guardado local en tu navegador.",
+    "start": 131.9,
+    "end": 133.94
+  },
+  {
+    "text": "Quote Assistant: cotizaciones, bajo control.",
+    "start": 134.32,
+    "end": 136.88
+  }
+]

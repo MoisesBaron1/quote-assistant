@@ -1,0 +1,86 @@
+{
+  "voice": "em_alex",
+  "lang": "es",
+  "speed": 0.97,
+  "sampleRate": 24000,
+  "duration": 139.22733333333332,
+  "scenes": [
+    {
+      "id": "hook",
+      "start": 0,
+      "duration": 8.04067,
+      "voiceStart": 0.35,
+      "voiceEnd": 7.24067
+    },
+    {
+      "id": "overview",
+      "start": 8.04067,
+      "duration": 12.81933,
+      "voiceStart": 8.39067,
+      "voiceEnd": 20.06
+    },
+    {
+      "id": "filter",
+      "start": 20.86,
+      "duration": 13.71533,
+      "voiceStart": 21.21,
+      "voiceEnd": 33.77533
+    },
+    {
+      "id": "create",
+      "start": 34.57533,
+      "duration": 11.81667,
+      "voiceStart": 34.92533,
+      "voiceEnd": 45.592
+    },
+    {
+      "id": "detail",
+      "start": 46.392,
+      "duration": 15.358,
+      "voiceStart": 46.742,
+      "voiceEnd": 60.95
+    },
+    {
+      "id": "team",
+      "start": 61.75,
+      "duration": 14.206,
+      "voiceStart": 62.1,
+      "voiceEnd": 75.156
+    },
+    {
+      "id": "calendar",
+      "start": 75.956,
+      "duration": 10.43,
+      "voiceStart": 76.306,
+      "voiceEnd": 85.586
+    },
+    {
+      "id": "alerts",
+      "start": 86.386,
+      "duration": 12.43533,
+      "voiceStart": 86.736,
+      "voiceEnd": 98.02133
+    },
+    {
+      "id": "report",
+      "start": 98.82133,
+      "duration": 13.03267,
+      "voiceStart": 99.17133,
+      "voiceEnd": 111.054
+    },
+    {
+      "id": "backup",
+      "start": 111.854,
+      "duration": 12.96867,
+      "voiceStart": 112.204,
+      "voiceEnd": 124.02267
+    },
+    {
+      "id": "close",
+      "start": 124.82267,
+      "duration": 14.40467,
+      "voiceStart": 125.17267,
+      "voiceEnd": 136.92733
+    }
+  ]
+}

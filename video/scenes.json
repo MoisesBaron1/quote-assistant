@@ -1,0 +1,140 @@
+[
+  {
+    "id": "hook",
+    "label": "VISIBILIDAD PARA DECIDIR",
+    "title": "Cada cotización. Un compromiso.",
+    "copy": "Fechas, responsables y próximos pasos en una misma vista.",
+    "action": "Quote Assistant",
+    "narration": "Cada cotización tiene un compromiso. Cuout Asístent te ayuda a verlo, darle seguimiento y decidir qué hacer después.",
+    "images": [
+      "overview.png"
+    ],
+    "layout": "hero"
+  },
+  {
+    "id": "overview",
+    "label": "01 · RESUMEN",
+    "title": "Empieza por lo importante.",
+    "copy": "Revisa entregas, pendientes y capacidad del equipo.",
+    "action": "Resumen → indicadores",
+    "narration": "Empieza en Resumen. Los indicadores muestran el estado de las cotizaciones. Más abajo, compara las horas pendientes con la capacidad del equipo. Así identificas dónde conviene enfocar tu atención.",
+    "images": [
+      "overview.png"
+    ],
+    "layout": "split"
+  },
+  {
+    "id": "filter",
+    "label": "02 · COTIZACIONES",
+    "title": "Del indicador a la acción.",
+    "copy": "Pulsa Retrasadas para abrir la lista filtrada. Combina responsables y fechas.",
+    "action": "Retrasadas → Limpiar filtros",
+    "narration": "Para actuar sobre un indicador, haz clic en Retrasadas. La lista se filtra automáticamente. Puedes combinar responsables, fechas y estado, o pulsar Limpiar filtros para volver a ver todas las cotizaciones.",
+    "images": [
+      "filtered.png",
+      "filters.png"
+    ],
+    "layout": "screen"
+  },
+  {
+    "id": "create",
+    "label": "03 · NUEVA COTIZACIÓN",
+    "title": "Registra el siguiente compromiso.",
+    "copy": "Proyecto, cliente, responsables y fecha de entrega.",
+    "action": "Nueva cotización → Crear cotización",
+    "narration": "Para registrar una solicitud, pulsa Nueva cotización. Completa el proyecto, el cliente, los responsables y la fecha de entrega. Los campos obligatorios se señalan antes de guardar.",
+    "images": [
+      "new-quote.png"
+    ],
+    "layout": "detail"
+  },
+  {
+    "id": "detail",
+    "label": "04 · DETALLE E HISTORIAL",
+    "title": "Actualiza con contexto.",
+    "copy": "Conserva la fecha original y consulta qué cambió.",
+    "action": "Editar cotización → Guardar cambios → Historial",
+    "narration": "Abre una cotización para ver sus responsables, avance y compromiso original. Usa Editar cotización y guarda los cambios. En Historial puedes revisar las actualizaciones. Si cierras un borrador, la app pide confirmar antes de descartarlo.",
+    "images": [
+      "detail.png",
+      "edited.png",
+      "history.png"
+    ],
+    "layout": "detail"
+  },
+  {
+    "id": "team",
+    "label": "05 · EQUIPO",
+    "title": "Distribuye mejor el trabajo.",
+    "copy": "Revisa la propuesta antes de aplicar reasignaciones.",
+    "action": "Equipo → Equilibrar carga",
+    "narration": "En Equipo, pulsa Equilibrar carga. Revisa la propuesta y el cambio de carga estimado antes de aplicarla. También puedes cancelar. La recomendación usa horas y capacidad declaradas; acompáñala con el criterio del equipo.",
+    "images": [
+      "team.png",
+      "rebalance.png"
+    ],
+    "layout": "screen"
+  },
+  {
+    "id": "calendar",
+    "label": "06 · CALENDARIO",
+    "title": "Anticípate a la entrega.",
+    "copy": "Organiza los compromisos por fecha y abre el detalle.",
+    "action": "Calendario → Hoy",
+    "narration": "En Calendario, consulta las entregas por día, cambia de semana y vuelve a Hoy. Selecciona una cotización para abrir su detalle y revisar el siguiente paso.",
+    "images": [
+      "calendar.png"
+    ],
+    "layout": "screen"
+  },
+  {
+    "id": "alerts",
+    "label": "07 · ALERTAS",
+    "title": "Da seguimiento con claridad.",
+    "copy": "Revisa el riesgo y prepara un mensaje para el cliente.",
+    "action": "Alertas → Mensaje al cliente → Copiar mensaje",
+    "narration": "En Alertas, revisa la explicación de cada riesgo. Puedes preparar un mensaje para el cliente, ajustarlo y copiarlo. La demo genera un borrador; el envío lo realizas tú por el canal que prefieras.",
+    "images": [
+      "alerts.png",
+      "message.png"
+    ],
+    "layout": "detail"
+  },
+  {
+    "id": "report",
+    "label": "08 · INFORME EJECUTIVO",
+    "title": "Presenta las prioridades.",
+    "copy": "Carga, entregas y seguimiento en un informe imprimible.",
+    "action": "Resumen ejecutivo → Imprimir / PDF · Exportar CSV",
+    "narration": "Cierra con Resumen ejecutivo. Muestra la distribución del trabajo y las prioridades de seguimiento. Usa Imprimir para guardar un PDF, o Exportar CSV para trabajar con los datos de la selección.",
+    "images": [
+      "report.png"
+    ],
+    "layout": "screen"
+  },
+  {
+    "id": "backup",
+    "label": "09 · PREPARA TU DEMO",
+    "title": "Lleva un respaldo.",
+    "copy": "Descarga tus datos y espera la confirmación de uso sin conexión.",
+    "action": "Configuración → Descargar respaldo JSON",
+    "narration": "Antes de presentar, descarga un respaldo desde Configuración. Abre la app con internet y espera a ver Disponible sin conexión. Después podrás recargar y seguir trabajando aunque se corte la conexión.",
+    "images": [
+      "settings.png",
+      "offline-ready.png"
+    ],
+    "layout": "split"
+  },
+  {
+    "id": "close",
+    "label": "LISTO PARA PRESENTAR",
+    "title": "Cotizaciones, bajo control.",
+    "copy": "Activa la guía integrada y recorre los seis módulos principales.",
+    "action": "quote-assistant-moises.vercel.app",
+    "narration": "Activa la Guía de presentación para recorrer los módulos principales. Esta versión usa datos de ejemplo, roles simulados y guardado local en tu navegador. Cuout Asístent: cotizaciones, bajo control.",
+    "images": [
+      "guide.png"
+    ],
+    "layout": "hero"
+  }
+]
